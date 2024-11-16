@@ -1688,11 +1688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj",
+      "projectUniqueName": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj",
       "projectName": "CosaSQLVetPrueba",
-      "projectPath": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj",
+      "projectPath": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj",
       "packagesPath": "C:\\Users\\mercy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\CosaSQLVetPrueba\\obj\\",
+      "outputPath": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mercy\\AppData\\Roaming\\NuGet\\NuGet.Config",

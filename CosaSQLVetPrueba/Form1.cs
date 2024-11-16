@@ -1,5 +1,6 @@
 using MaterialSkin;
 using MaterialSkin.Controls;
+using System.Windows.Forms;
 
 namespace CosaSQLVetPrueba
 {
@@ -9,21 +10,36 @@ namespace CosaSQLVetPrueba
         BindingSource VentasBindingSource = new BindingSource();
         BindingSource InventarioBindingSource = new BindingSource();
         BindingSource ProveedorBindingSource = new BindingSource();
-        BindingSource ProveedorMini = new BindingSource();
+        BindingSource ProveedorMiniBindingSource = new BindingSource();
         BindingSource ProductosProveedoresBindingSource = new BindingSource();
+        BindingSource ProductosCuentaBindingSource = new BindingSource();
+        BindingSource ProductosPreviewBindingSource = new BindingSource();
         public Form1()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.Pink500, Primary.Pink700, Primary.Blue500, Accent.Green100, TextShade.BLACK);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Grey300, Primary.Pink400, Primary.Pink500, Accent.Pink700, TextShade.BLACK);
 
             TablasDAO tablasDAO = new TablasDAO();
 
             CuentasBindingSource.DataSource = tablasDAO.getAllCuentas();
             dataGridView1.DataSource = CuentasBindingSource;
+
+            InventarioBindingSource.DataSource = tablasDAO.getInventarioJobject();
+            dataGridView3.DataSource = InventarioBindingSource;
+
+            ProveedorBindingSource.DataSource = tablasDAO.getProveedorJobject();
+            dataGridView4.DataSource = ProveedorBindingSource;
+
+            ProveedorMiniBindingSource.DataSource = tablasDAO.getProveedorIDNombre();
+            dataGridView5.DataSource = ProveedorMiniBindingSource;
+
+            ProductosCuentaBindingSource.DataSource = tablasDAO.buscarInventario(materialTextBox8.Text);
+            dataGridView8.DataSource = ProductosCuentaBindingSource;
+
 
         }
 
@@ -47,7 +63,7 @@ namespace CosaSQLVetPrueba
         {
             TablasDAO tablasDAO = new TablasDAO();
 
-            CuentasBindingSource.DataSource = tablasDAO.getAllCuentas();
+            CuentasBindingSource.DataSource = tablasDAO.searchCuentas(materialTextBox1.Text, materialTextBox4.Text);
             dataGridView1.DataSource = CuentasBindingSource;
         }
 
@@ -70,7 +86,7 @@ namespace CosaSQLVetPrueba
         {//Boton Inventario
             TablasDAO tablasDAO = new TablasDAO();
 
-            InventarioBindingSource.DataSource = tablasDAO.getInventarioJobject();
+            InventarioBindingSource.DataSource = tablasDAO.searchInventarioJobject(materialTextBox6.Text, materialTextBox5.Text, materialTextBox7.Text);
             dataGridView3.DataSource = InventarioBindingSource;
         }
 
@@ -103,7 +119,7 @@ namespace CosaSQLVetPrueba
         {//Boton Proveedores
             TablasDAO tablasDAO = new TablasDAO();
 
-            ProveedorBindingSource.DataSource = tablasDAO.getProveedorJobject();
+            ProveedorBindingSource.DataSource = tablasDAO.searchProveedorJobject(materialTextBox2.Text);
             dataGridView4.DataSource = ProveedorBindingSource;
         }
 
@@ -116,8 +132,8 @@ namespace CosaSQLVetPrueba
         {//Boton Productos Proveedores
             TablasDAO tablasDAO = new TablasDAO();
 
-            ProveedorMini.DataSource = tablasDAO.getProveedorIDNombre();
-            dataGridView5.DataSource = ProveedorMini;
+            ProveedorMiniBindingSource.DataSource = tablasDAO.searchProveedorIDNombre(materialTextBox3.Text);
+            dataGridView5.DataSource = ProveedorMiniBindingSource;
         }
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -132,6 +148,105 @@ namespace CosaSQLVetPrueba
         }
 
         private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton5_Click(object sender, EventArgs e)
+        {
+            TablasDAO tablasDAO = new TablasDAO();
+
+            ProductosCuentaBindingSource.DataSource = tablasDAO.buscarInventario(materialTextBox8.Text);
+            dataGridView8.DataSource = ProductosCuentaBindingSource;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView8_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+            int rowClicked = dataGridView.CurrentRow.Index;
+
+            TablasDAO tablasDAO = new TablasDAO();
+            ProductosPreviewBindingSource.DataSource = tablasDAO.getProductoPreview((int)dataGridView.Rows[rowClicked].Cells[0].Value);
+            dataGridView9.DataSource = ProductosPreviewBindingSource;
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialDrawer1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton6_Click(object sender, EventArgs e)
+        {
+            //
+            int IDproducto = (int)dataGridView9.Rows[0].Cells[0].Value;
+
+            TablasDAO tablasDAO = new TablasDAO();
+            ProductosPreviewBindingSource.DataSource = tablasDAO.getProductoPreview(IDproducto);
+            dataGridView7.DataSource = ProductosPreviewBindingSource;
+        }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
