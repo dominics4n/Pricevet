@@ -1,12 +1,14 @@
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CosaSQLVetPrueba
 {
     public partial class Form1 : MaterialForm
     {
         BindingSource CuentasBindingSource = new BindingSource();
+        BindingSource UltimaCuentaBindingSource = new BindingSource();
         BindingSource VentasBindingSource = new BindingSource();
         BindingSource InventarioBindingSource = new BindingSource();
         BindingSource ProveedorBindingSource = new BindingSource();
@@ -14,6 +16,8 @@ namespace CosaSQLVetPrueba
         BindingSource ProductosProveedoresBindingSource = new BindingSource();
         BindingSource ProductosCuentaBindingSource = new BindingSource();
         BindingSource ProductosPreviewBindingSource = new BindingSource();
+        BindingSource UltimaVentaBindingSource = new BindingSource();
+        BindingSource NuevaCuentaBindingSource = new BindingSource();
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +44,22 @@ namespace CosaSQLVetPrueba
             ProductosCuentaBindingSource.DataSource = tablasDAO.buscarInventario(materialTextBox8.Text);
             dataGridView8.DataSource = ProductosCuentaBindingSource;
 
+            UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
+            dataGridView10.DataSource = UltimaCuentaBindingSource;
 
+            UltimaVentaBindingSource.DataSource = tablasDAO.getUltimaVenta();
+            dataGridView7.DataSource = UltimaVentaBindingSource;
+
+            float totalfl = tablasDAO.updateTotal("total");
+            float subtotalfl = tablasDAO.updateTotal("subtotal");
+            float descuentofl = totalfl - subtotalfl;
+            float ivafl = totalfl * 16 / 100;
+            string totalstring = string.Format("{0:N2}", totalfl);
+            string subtotalstring = string.Format("{0:N2}", subtotalfl);
+            string descuentostring = string.Format("{0:N2}", descuentofl); ;
+            string ivastring = string.Format("{0:N2}", ivafl); ;
+            label_total.Text = totalstring; label_descuento.Text = descuentostring;
+            label_subtotal.Text = subtotalstring; label_iva.Text = ivastring;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -192,12 +211,37 @@ namespace CosaSQLVetPrueba
 
         private void materialButton6_Click(object sender, EventArgs e)
         {
-            //
+
             int IDproducto = (int)dataGridView9.Rows[0].Cells[0].Value;
+            int IDCuenta = (int)dataGridView10.Rows[0].Cells[0].Value;
+            float precio = (float)dataGridView9.Rows[0].Cells[3].Value;
+            int descuentoint = (int)dataGridView9.Rows[0].Cells[4].Value;
+            float descuento = (float)descuentoint;
+            string productoname = (string)dataGridView9.Rows[0].Cells[1].Value;
+            int Cantidad = 1;
+            Int32.TryParse(materialTextBox9.Text, out Cantidad);
 
             TablasDAO tablasDAO = new TablasDAO();
-            ProductosPreviewBindingSource.DataSource = tablasDAO.getProductoPreview(IDproducto);
-            dataGridView7.DataSource = ProductosPreviewBindingSource;
+
+            int updateventas = tablasDAO.updateUltimaVenta(productoname, IDCuenta, Cantidad, precio, descuento);
+            int updateventascuentas = tablasDAO.updateventahascuenta(IDproducto);
+
+            VentasBindingSource.DataSource = tablasDAO.getVentasDetalleJoin(IDCuenta);
+            dataGridView7.DataSource = VentasBindingSource;
+
+            float totalfl = tablasDAO.updateTotal("total");
+            float subtotalfl = tablasDAO.updateTotal("subtotal");
+            float descuentofl = totalfl - subtotalfl;
+            float ivafl = totalfl * 16 / 100;
+            string totalstring = string.Format("{0:N2}", totalfl);
+            string subtotalstring = string.Format("{0:N2}", subtotalfl);
+            string descuentostring = string.Format("{0:N2}", descuentofl); ;
+            string ivastring = string.Format("{0:N2}", ivafl); ;
+            label_total.Text = totalstring; label_descuento.Text = descuentostring;
+            label_subtotal.Text = subtotalstring; label_iva.Text = ivastring;
+
+            UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
+            dataGridView10.DataSource = UltimaCuentaBindingSource;
         }
 
         private void materialLabel2_Click(object sender, EventArgs e)
@@ -211,12 +255,6 @@ namespace CosaSQLVetPrueba
         }
 
         private void dataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -249,6 +287,53 @@ namespace CosaSQLVetPrueba
         private void materialTextBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            int IDcuenta = (int)dataGridView10.Rows[0].Cells[0].Value;
+            string MetodoPago = "Efectivo";
+            TablasDAO tablasDAO = new TablasDAO();
+
+            int updatecuenta = tablasDAO.updateUltimaCuenta(IDcuenta, MetodoPago);
+            UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
+            dataGridView10.DataSource = UltimaCuentaBindingSource;
+        }
+
+        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            int IDcuenta = (int)dataGridView10.Rows[0].Cells[0].Value;
+            string MetodoPago = "Tarjeta";
+            TablasDAO tablasDAO = new TablasDAO();
+
+            int updatecuenta = tablasDAO.updateUltimaCuenta(IDcuenta, MetodoPago);
+            UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
+            dataGridView10.DataSource = UltimaCuentaBindingSource;
+        }
+
+        private void dataGridView10_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton7_Click(object sender, EventArgs e)
+        {
+            TablasDAO tablasDAO = new TablasDAO();
+            int updatecuenta = tablasDAO.insertCuenta();
+            UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
+            dataGridView10.DataSource = UltimaCuentaBindingSource;
+            UltimaVentaBindingSource.DataSource = tablasDAO.getUltimaVenta();
+            dataGridView7.DataSource = UltimaVentaBindingSource;
         }
     }
 }

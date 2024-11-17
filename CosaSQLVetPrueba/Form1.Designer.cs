@@ -69,6 +69,15 @@
             dataGridView6 = new DataGridView();
             dataGridView5 = new DataGridView();
             tabPage3 = new TabPage();
+            groupBox2 = new GroupBox();
+            label_total = new Label();
+            label_iva = new Label();
+            label_descuento = new Label();
+            label_subtotal = new Label();
+            materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
             groupBox1 = new GroupBox();
             materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
@@ -99,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
             tabPage3.SuspendLayout();
+            groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView9).BeginInit();
@@ -616,6 +626,7 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(groupBox2);
             tabPage3.Controls.Add(groupBox1);
             tabPage3.Controls.Add(materialButton7);
             tabPage3.Controls.Add(materialLabel5);
@@ -631,6 +642,7 @@
             tabPage3.Controls.Add(materialTextBox8);
             tabPage3.Controls.Add(dataGridView8);
             tabPage3.Controls.Add(dataGridView7);
+            tabPage3.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -640,12 +652,123 @@
             tabPage3.UseVisualStyleBackColor = true;
             tabPage3.Click += tabPage3_Click;
             // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = SystemColors.ControlLightLight;
+            groupBox2.BackgroundImageLayout = ImageLayout.None;
+            groupBox2.Controls.Add(label_total);
+            groupBox2.Controls.Add(label_iva);
+            groupBox2.Controls.Add(label_descuento);
+            groupBox2.Controls.Add(label_subtotal);
+            groupBox2.Controls.Add(materialLabel17);
+            groupBox2.Controls.Add(materialLabel16);
+            groupBox2.Controls.Add(materialLabel15);
+            groupBox2.Controls.Add(materialLabel14);
+            groupBox2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox2.ForeColor = Color.Black;
+            groupBox2.Location = new Point(1370, 357);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(426, 285);
+            groupBox2.TabIndex = 17;
+            groupBox2.TabStop = false;
+            groupBox2.Text = " ";
+            groupBox2.Enter += groupBox2_Enter;
+            // 
+            // label_total
+            // 
+            label_total.AutoSize = true;
+            label_total.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_total.Location = new Point(273, 224);
+            label_total.Name = "label_total";
+            label_total.Size = new Size(22, 23);
+            label_total.TabIndex = 7;
+            label_total.Text = "0";
+            // 
+            // label_iva
+            // 
+            label_iva.AutoSize = true;
+            label_iva.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_iva.Location = new Point(273, 161);
+            label_iva.Name = "label_iva";
+            label_iva.Size = new Size(22, 23);
+            label_iva.TabIndex = 6;
+            label_iva.Text = "0";
+            // 
+            // label_descuento
+            // 
+            label_descuento.AutoSize = true;
+            label_descuento.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_descuento.Location = new Point(273, 98);
+            label_descuento.Name = "label_descuento";
+            label_descuento.Size = new Size(22, 23);
+            label_descuento.TabIndex = 5;
+            label_descuento.Text = "0";
+            // 
+            // label_subtotal
+            // 
+            label_subtotal.AutoSize = true;
+            label_subtotal.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_subtotal.Location = new Point(273, 35);
+            label_subtotal.Name = "label_subtotal";
+            label_subtotal.Size = new Size(22, 23);
+            label_subtotal.TabIndex = 4;
+            label_subtotal.Text = "0";
+            // 
+            // materialLabel17
+            // 
+            materialLabel17.AutoSize = true;
+            materialLabel17.Depth = 0;
+            materialLabel17.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel17.Location = new Point(15, 165);
+            materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel17.Name = "materialLabel17";
+            materialLabel17.Size = new Size(85, 19);
+            materialLabel17.TabIndex = 3;
+            materialLabel17.Text = "IVA Incluido";
+            // 
+            // materialLabel16
+            // 
+            materialLabel16.AutoSize = true;
+            materialLabel16.Depth = 0;
+            materialLabel16.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel16.Location = new Point(15, 228);
+            materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel16.Name = "materialLabel16";
+            materialLabel16.Size = new Size(38, 19);
+            materialLabel16.TabIndex = 2;
+            materialLabel16.Text = "Total";
+            // 
+            // materialLabel15
+            // 
+            materialLabel15.AutoSize = true;
+            materialLabel15.Depth = 0;
+            materialLabel15.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel15.Location = new Point(15, 102);
+            materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel15.Name = "materialLabel15";
+            materialLabel15.Size = new Size(117, 19);
+            materialLabel15.TabIndex = 1;
+            materialLabel15.Text = "Descuento Total";
+            materialLabel15.Click += materialLabel15_Click;
+            // 
+            // materialLabel14
+            // 
+            materialLabel14.AutoSize = true;
+            materialLabel14.Depth = 0;
+            materialLabel14.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel14.Location = new Point(15, 40);
+            materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel14.Name = "materialLabel14";
+            materialLabel14.Size = new Size(61, 19);
+            materialLabel14.TabIndex = 0;
+            materialLabel14.Text = "Subtotal";
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(materialLabel6);
             groupBox1.Controls.Add(materialRadioButton1);
             groupBox1.Controls.Add(materialRadioButton2);
-            groupBox1.Location = new Point(721, 11);
+            groupBox1.Location = new Point(908, 11);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(322, 80);
             groupBox1.TabIndex = 16;
@@ -679,6 +802,7 @@
             materialRadioButton1.TabStop = true;
             materialRadioButton1.Text = "Efectivo";
             materialRadioButton1.UseVisualStyleBackColor = true;
+            materialRadioButton1.CheckedChanged += materialRadioButton1_CheckedChanged;
             // 
             // materialRadioButton2
             // 
@@ -715,6 +839,7 @@
             materialButton7.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton7.UseAccentColor = false;
             materialButton7.UseVisualStyleBackColor = true;
+            materialButton7.Click += materialButton7_Click;
             // 
             // materialLabel5
             // 
@@ -730,6 +855,7 @@
             // 
             // dataGridView10
             // 
+            dataGridView10.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView10.BackgroundColor = SystemColors.Window;
             dataGridView10.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -743,8 +869,9 @@
             dataGridView10.GridColor = SystemColors.Window;
             dataGridView10.Location = new Point(56, 33);
             dataGridView10.Name = "dataGridView10";
-            dataGridView10.Size = new Size(535, 54);
+            dataGridView10.Size = new Size(824, 54);
             dataGridView10.TabIndex = 11;
+            dataGridView10.CellContentClick += dataGridView10_CellContentClick;
             // 
             // materialLabel4
             // 
@@ -763,7 +890,7 @@
             materialLabel3.AutoSize = true;
             materialLabel3.Depth = 0;
             materialLabel3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel3.Location = new Point(56, 235);
+            materialLabel3.Location = new Point(56, 246);
             materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel3.Name = "materialLabel3";
             materialLabel3.Size = new Size(137, 19);
@@ -810,7 +937,7 @@
             materialButton6.Depth = 0;
             materialButton6.HighEmphasis = true;
             materialButton6.Icon = null;
-            materialButton6.Location = new Point(1478, 286);
+            materialButton6.Location = new Point(1484, 286);
             materialButton6.Margin = new Padding(4, 6, 4, 6);
             materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton6.Name = "materialButton6";
@@ -917,7 +1044,7 @@
             dataGridView7.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.BackColor = SystemColors.Window;
-            dataGridViewCellStyle11.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle11.ForeColor = Color.DeepPink;
             dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
@@ -925,7 +1052,7 @@
             dataGridView7.DefaultCellStyle = dataGridViewCellStyle11;
             dataGridView7.Location = new Point(56, 357);
             dataGridView7.Name = "dataGridView7";
-            dataGridView7.Size = new Size(1781, 586);
+            dataGridView7.Size = new Size(1266, 586);
             dataGridView7.TabIndex = 0;
             dataGridView7.CellContentClick += dataGridView7_CellContentClick;
             // 
@@ -959,6 +1086,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView10).EndInit();
@@ -1019,5 +1148,14 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private MaterialSkin.Controls.MaterialLabel materialLabel13;
+        private GroupBox groupBox2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel16;
+        private MaterialSkin.Controls.MaterialLabel materialLabel15;
+        private MaterialSkin.Controls.MaterialLabel materialLabel14;
+        private MaterialSkin.Controls.MaterialLabel materialLabel17;
+        private Label label_total;
+        private Label label_iva;
+        private Label label_descuento;
+        private Label label_subtotal;
     }
 }

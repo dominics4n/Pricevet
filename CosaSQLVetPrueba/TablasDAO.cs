@@ -401,5 +401,197 @@ namespace CosaSQLVetPrueba
             return returnThese;
         }
 
+        public List<Cuentas> getUltimaCuenta()
+        {
+            List<Cuentas> returnThese = new List<Cuentas>();
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT * FROM `ventas_cuenta` ORDER BY `ID_Cuenta` DESC LIMIT 1";
+            command.Connection = connection;
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Cuentas a = new Cuentas
+                    {
+                        ID_Cuentas = reader.GetInt32(0),
+                        Total = reader.GetFloat(1),
+                        Fecha = reader.GetDateTime(2),
+                        Forma_pago = reader.GetString(3)
+                    };
+                    returnThese.Add(a);
+                }
+            }
+            connection.Close();
+            return returnThese;
+        }
+        internal int updateUltimaCuenta(int IDCuenta, string MetodoPago)
+        {
+            
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "UPDATE `ventas_cuenta` SET `Forma_Pago`= @metodoPago WHERE `ID_Cuenta` = @ultimaID";
+            command.Parameters.AddWithValue("@ultimaID", IDCuenta);
+            command.Parameters.AddWithValue("@metodoPago", MetodoPago);
+            command.Connection = connection;
+            int updatecuentas = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updatecuentas;
+        }
+
+        internal int updateUltimaVenta(string NameProducto,int IDCuenta, int Cantidad, float Precio, float Descuento)
+        {
+
+            float Subtotal = Precio * Cantidad;
+            float Desctotal = Descuento / 100 * Precio * Cantidad;
+
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "INSERT INTO `ventas_detalle`(`Producto`, `Cantidad`, `Precio_Individual`, `Precio_Total`, `Descuento_Total`, `Ventas_Cuenta_ID_Cuenta`) VALUES (@productoname, @cantidad, @precioindi, @subtotal, @desctotal, @cuentaID)";
+            command.Parameters.AddWithValue("@productoname", NameProducto);
+            command.Parameters.AddWithValue("@cantidad", Cantidad);
+            command.Parameters.AddWithValue("@precioindi", Precio);
+            command.Parameters.AddWithValue("@subtotal", Subtotal);
+            command.Parameters.AddWithValue("@desctotal", Desctotal);
+            command.Parameters.AddWithValue("@cuentaID", IDCuenta);
+            command.Connection = connection;
+            int updateventas = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updateventas;
+        }
+
+        internal int updateventahascuenta(int IDVenta)
+        {
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "INSERT INTO `productos_has_ventas_detalle`(`productos_ID_Productos`, `Ventas_Detalle_ID_Ven_Detalle`) SELECT @ventaID AS `productos_ID_Productos`, ID_Ven_Detalle AS `Ventas_Detalle_ID_Ven_Detalle` FROM ventas_detalle ORDER BY `ID_Ven_Detalle` DESC LIMIT 1";
+            command.Parameters.AddWithValue("@ventaID", IDVenta);
+            command.Connection = connection;
+            int updateventascuentas = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updateventascuentas;
+        }
+
+        public List<JObject> getUltimaVenta()
+        {
+            int lastID = 1;
+            List<JObject> returnThese = new List<JObject>();
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            MySqlCommand lastid = new MySqlCommand();
+            MySqlCommand command = new MySqlCommand();
+            lastid.CommandText = "SELECT MAX(`ID_Cuenta`) FROM `ventas_cuenta`";
+            lastid.Connection = connection;
+            using (MySqlDataReader reader = lastid.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    lastID = reader.GetInt32(0);
+                }
+            }
+
+            command.CommandText = "SELECT productos.Nombre_Producto, productos.Presentacion_Producto, ventas_detalle.Cantidad, ventas_detalle.Precio_Individual, ventas_detalle.Precio_Total, ventas_detalle.Descuento_Total\r\nFROM productos\r\n INNER JOIN productos_has_ventas_detalle ON productos.ID_Productos = productos_has_ventas_detalle.productos_ID_Productos\r\n INNER JOIN ventas_detalle ON productos_has_ventas_detalle.Ventas_Detalle_ID_Ven_Detalle = ventas_detalle.ID_Ven_Detalle WHERE ventas_detalle.Ventas_Cuenta_ID_Cuenta = @last_id";
+            command.Parameters.AddWithValue("@last_id", lastID);
+            command.Connection = connection;
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    JObject newVenta = new JObject();
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        newVenta.Add(reader.GetName(i).ToString(), reader.GetValue(i).ToString());
+                    }
+                    returnThese.Add(newVenta);
+                }
+            }
+            connection.Close();
+            return returnThese;
+        }
+
+        internal float updateTotal(string totals)
+        {
+            int lastID = 1;
+            float totalIndiv, descuentoIndiv;
+            float subtotal = 0, desctotal = 0, total = 0;
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            MySqlCommand lastid = new MySqlCommand();
+            lastid.CommandText = "SELECT MAX(`Ventas_Cuenta_ID_Cuenta`) FROM `ventas_detalle`";
+            lastid.Connection = connection;
+            using (MySqlDataReader reader = lastid.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    lastID = reader.GetInt32(0);
+                }
+            }
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT `Precio_Total`, `Descuento_Total` FROM `ventas_detalle`  WHERE `Ventas_Cuenta_ID_Cuenta` = @last_id";
+            command.Parameters.AddWithValue("@last_id", lastID);
+            command.Connection = connection;
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    totalIndiv = reader.GetFloat(0);
+                    descuentoIndiv = reader.GetFloat(1);
+                    subtotal = subtotal + totalIndiv;
+                    desctotal = desctotal + descuentoIndiv;
+                }
+            }
+            total = subtotal - desctotal;
+
+            MySqlCommand updatetotal  = new MySqlCommand();
+            updatetotal.CommandText = "UPDATE `ventas_cuenta` SET  `Total`= @newtotal WHERE `ID_Cuenta` = @ultimaID";
+            updatetotal.Parameters.AddWithValue("@newtotal", total);
+            updatetotal.Parameters.AddWithValue("@ultimaID", lastID);
+            updatetotal.Connection = connection;
+            updatetotal.ExecuteNonQuery();
+            connection.Close();
+            if (totals == "subtotal")
+            {
+                return subtotal;
+            }
+            else {
+                return total;
+            }
+            
+        }
+
+        internal int insertCuenta()
+        {
+            
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            
+            MySqlCommand newCuenta = new MySqlCommand();
+            newCuenta.CommandText = "INSERT INTO `ventas_cuenta` (`ID_Cuenta`, `Total`, `Fecha`, `Forma_Pago`) VALUES (NULL, '0', current_timestamp(), 'Efectivo')";
+            newCuenta.Connection = connection;
+            int insertcuenta = newCuenta.ExecuteNonQuery();
+            connection.Close();
+            return insertcuenta;
+        }
+
+
+
     }
 }

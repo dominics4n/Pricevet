@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\",
+  "WorkspaceRootPath": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetv1\\cosasqlvetprueba\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetv1\\cosasqlvetprueba\\tablasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\tablasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetv1\\cosasqlvetprueba\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetmain\\cosasqlvetprueba\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetv1\\cosasqlvetprueba\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetmain\\cosasqlvetprueba\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetmain\\cosasqlvetprueba\\tablasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\tablasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetmain\\cosasqlvetprueba\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetv1\\cosasqlvetprueba\\cuentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetmain\\cosasqlvetprueba\\cuentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\cuentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|c:\\users\\mercy\\source\\repos\\cosasqlvetprueba\\pricevetv1\\cosasqlvetprueba\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73BB0DE2-11B2-4280-924A-2D96A29BC430}|CosaSQLVetPrueba\\CosaSQLVetPrueba.csproj|solutionrelative:cosasqlvetprueba\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,15 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Cuentas.cs",
-              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Cuentas.cs",
+              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Cuentas.cs",
               "RelativeDocumentMoniker": "CosaSQLVetPrueba\\Cuentas.cs",
-              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Cuentas.cs",
+              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Cuentas.cs",
               "RelativeToolTip": "CosaSQLVetPrueba\\Cuentas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -50,61 +46,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "CosaSQLVetPrueba\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Form1.Designer.cs",
-              "RelativeToolTip": "CosaSQLVetPrueba\\Form1.Designer.cs",
-              "ViewState": "AgIAAJcDAAAAAAAAAAAMwKADAAAmAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Productos.cs",
+              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Productos.cs",
+              "RelativeDocumentMoniker": "CosaSQLVetPrueba\\Productos.cs",
+              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Productos.cs",
+              "RelativeToolTip": "CosaSQLVetPrueba\\Productos.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwCEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:06:11.934Z",
+              "WhenOpened": "2024-11-15T07:17:29.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Productos.cs",
-              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Productos.cs",
-              "RelativeDocumentMoniker": "CosaSQLVetPrueba\\Productos.cs",
-              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Productos.cs",
-              "RelativeToolTip": "CosaSQLVetPrueba\\Productos.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA6wCEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T07:17:29.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TablasDAO.cs",
-              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\TablasDAO.cs",
-              "RelativeDocumentMoniker": "CosaSQLVetPrueba\\TablasDAO.cs",
-              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\TablasDAO.cs",
-              "RelativeToolTip": "CosaSQLVetPrueba\\TablasDAO.cs",
-              "ViewState": "AgIAAHEBAAAAAAAAAAAcwHwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:06:58.766Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "TablasDAO.cs",
+              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\TablasDAO.cs",
+              "RelativeDocumentMoniker": "CosaSQLVetPrueba\\TablasDAO.cs",
+              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\TablasDAO.cs",
+              "RelativeToolTip": "CosaSQLVetPrueba\\TablasDAO.cs",
+              "ViewState": "AgIAADsCAAAAAAAAAAAIwEoCAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T08:06:58.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Form1.cs",
               "RelativeDocumentMoniker": "CosaSQLVetPrueba\\Form1.cs",
-              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Form1.cs",
+              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Form1.cs",
               "RelativeToolTip": "CosaSQLVetPrueba\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwBAAAAAAAAAAAAAE8BAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T06:53:08.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Form1.cs",
               "RelativeDocumentMoniker": "CosaSQLVetPrueba\\Form1.cs",
-              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetV1\\CosaSQLVetPrueba\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\mercy\\source\\repos\\CosaSQLVetPrueba\\PriceVetMain\\CosaSQLVetPrueba\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "CosaSQLVetPrueba\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T21:06:36.331Z",
