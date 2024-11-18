@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CosaSQLVetPrueba")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2e74f83bdb3e76f421f3432d88a348b3c48c417")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f27cc2a358229ca0f8a0c1b6844148e7b6a09ef3")]
 [assembly: System.Reflection.AssemblyProductAttribute("CosaSQLVetPrueba")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CosaSQLVetPrueba")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

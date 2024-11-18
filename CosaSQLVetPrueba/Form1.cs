@@ -1,7 +1,16 @@
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using SkiaSharp;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using MySql.Data.MySqlClient;
+using System.Drawing;
+using LiveChartsCore.SkiaSharpView.Painting;
+using LiveChartsCore.SkiaSharpView.Painting.ImageFilters;
+using Org.BouncyCastle.Ocsp;
+using System.Reflection.PortableExecutable;
 
 namespace CosaSQLVetPrueba
 {
@@ -18,6 +27,166 @@ namespace CosaSQLVetPrueba
         BindingSource ProductosPreviewBindingSource = new BindingSource();
         BindingSource UltimaVentaBindingSource = new BindingSource();
         BindingSource NuevaCuentaBindingSource = new BindingSource();
+        BindingSource MaxVentasBindigSource = new BindingSource();
+        BindingSource MaxIngresoBindigSource = new BindingSource();
+
+        public void estadisticaspro()
+        {
+            TablasDAO tablasDAO = new TablasDAO();
+            MaxIngresoBindigSource.DataSource = tablasDAO.getMaxDineros();
+            dataGridView12.DataSource = MaxIngresoBindigSource;
+            MaxVentasBindigSource.DataSource = tablasDAO.getMaxventas();
+            dataGridView11.DataSource = MaxVentasBindigSource;
+
+            int unoventas = (int)dataGridView11.Rows[0].Cells[1].Value;
+            int dosventas = (int)dataGridView11.Rows[1].Cells[1].Value;
+            int tresventas = (int)dataGridView11.Rows[2].Cells[1].Value;
+            int fourventas = (int)dataGridView11.Rows[3].Cells[1].Value;
+            int fiveventas = (int)dataGridView11.Rows[4].Cells[1].Value;
+
+            cartesianChart1.Series = new ISeries[]
+            {
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView11.Rows[0].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)unoventas],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView11.Rows[1].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [dosventas],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView11.Rows[2].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)tresventas],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView11.Rows[3].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)fourventas],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView11.Rows[4].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)fiveventas],
+                    MaxBarWidth = double.MaxValue
+                }
+            };
+
+            float unoingreso = (float)dataGridView12.Rows[0].Cells[1].Value;
+            float dosingreso = (float)dataGridView12.Rows[1].Cells[1].Value;
+            float tresingreso = (float)dataGridView12.Rows[2].Cells[1].Value;
+            float fouringreso = (float)dataGridView12.Rows[3].Cells[1].Value;
+            float fiveingreso = (float)dataGridView12.Rows[4].Cells[1].Value;
+
+            cartesianChart2.Series = new ISeries[]
+            {
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView12.Rows[0].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)unoingreso],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView12.Rows[1].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [dosingreso],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView12.Rows[2].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)tresingreso],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView12.Rows[3].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)fouringreso],
+                    MaxBarWidth = double.MaxValue
+                },
+                new ColumnSeries<double>
+                {
+                    Name = (string)dataGridView12.Rows[4].Cells[0].Value,
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.DeepPink),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+                    Values = [(double)fiveingreso],
+                    MaxBarWidth = double.MaxValue
+                }
+
+            };
+
+            cartesianChart1.XAxes = new List<Axis>
+            {
+                new Axis
+                {
+                    // Use the labels property to define named labels.
+                    Labels = new string[] { " " }
+                }
+            };
+
+            cartesianChart2.XAxes = new List<Axis>
+            {
+                new Axis
+                {
+                    // Use the labels property to define named labels.
+                    Labels = new string[] { " " }
+                }
+            };
+            cartesianChart2.YAxes = new List<Axis>
+            {
+                new Axis
+                {
+                    // Use the labels property to define named labels.
+                    Labeler = Labelers.Currency
+                }
+            };
+
+            tablasDAO.getEstadisticas();
+            int prodvendidosint = tablasDAO.getEstadisticas();
+            float dinerostotalfl = tablasDAO.DAOtotalingresosfl;
+            string prodmenosvendido = tablasDAO.DAOmenosventas;
+            string prodmenosdineros = tablasDAO.DAOmenosdineros;
+
+            string prodvendidostxt = prodvendidosint.ToString();
+            string dinerostotaltxt = string.Format("{0:N2}", dinerostotalfl);
+            label_totalventas.Text = prodvendidostxt; label_totaldinero.Text = dinerostotaltxt;
+            label_menosvendido.Text = prodmenosvendido; label_menosdinero.Text = prodmenosdineros;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -56,10 +225,13 @@ namespace CosaSQLVetPrueba
             float ivafl = totalfl * 16 / 100;
             string totalstring = string.Format("{0:N2}", totalfl);
             string subtotalstring = string.Format("{0:N2}", subtotalfl);
-            string descuentostring = string.Format("{0:N2}", descuentofl); ;
-            string ivastring = string.Format("{0:N2}", ivafl); ;
+            string descuentostring = string.Format("{0:N2}", descuentofl);
+            string ivastring = string.Format("{0:N2}", ivafl);
             label_total.Text = totalstring; label_descuento.Text = descuentostring;
             label_subtotal.Text = subtotalstring; label_iva.Text = ivastring;
+            estadisticaspro();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -223,7 +395,7 @@ namespace CosaSQLVetPrueba
 
             TablasDAO tablasDAO = new TablasDAO();
 
-            int updateventas = tablasDAO.updateUltimaVenta(productoname, IDCuenta, Cantidad, precio, descuento);
+            int updateventas = tablasDAO.updateUltimaVenta(productoname, IDCuenta, Cantidad, precio, descuento, IDproducto);
             int updateventascuentas = tablasDAO.updateventahascuenta(IDproducto);
 
             VentasBindingSource.DataSource = tablasDAO.getVentasDetalleJoin(IDCuenta);
@@ -235,13 +407,15 @@ namespace CosaSQLVetPrueba
             float ivafl = totalfl * 16 / 100;
             string totalstring = string.Format("{0:N2}", totalfl);
             string subtotalstring = string.Format("{0:N2}", subtotalfl);
-            string descuentostring = string.Format("{0:N2}", descuentofl); ;
-            string ivastring = string.Format("{0:N2}", ivafl); ;
+            string descuentostring = string.Format("{0:N2}", descuentofl);
+            string ivastring = string.Format("{0:N2}", ivafl);
             label_total.Text = totalstring; label_descuento.Text = descuentostring;
             label_subtotal.Text = subtotalstring; label_iva.Text = ivastring;
 
             UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
             dataGridView10.DataSource = UltimaCuentaBindingSource;
+
+            estadisticaspro();
         }
 
         private void materialLabel2_Click(object sender, EventArgs e)
@@ -298,6 +472,7 @@ namespace CosaSQLVetPrueba
             int updatecuenta = tablasDAO.updateUltimaCuenta(IDcuenta, MetodoPago);
             UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
             dataGridView10.DataSource = UltimaCuentaBindingSource;
+            estadisticaspro();
         }
 
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
@@ -334,6 +509,25 @@ namespace CosaSQLVetPrueba
             dataGridView10.DataSource = UltimaCuentaBindingSource;
             UltimaVentaBindingSource.DataSource = tablasDAO.getUltimaVenta();
             dataGridView7.DataSource = UltimaVentaBindingSource;
+
+            label_total.Text = "0"; label_descuento.Text = "0";
+            label_subtotal.Text = "0"; label_iva.Text = "0";
+            
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cartesianChart1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

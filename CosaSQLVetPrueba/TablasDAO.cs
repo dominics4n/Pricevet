@@ -446,7 +446,7 @@ namespace CosaSQLVetPrueba
             return updatecuentas;
         }
 
-        internal int updateUltimaVenta(string NameProducto,int IDCuenta, int Cantidad, float Precio, float Descuento)
+        internal int updateUltimaVenta(string NameProducto,int IDCuenta, int Cantidad, float Precio, float Descuento, int IDProd)
         {
 
             float Subtotal = Precio * Cantidad;
@@ -457,13 +457,14 @@ namespace CosaSQLVetPrueba
             connection.Open();
 
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = "INSERT INTO `ventas_detalle`(`Producto`, `Cantidad`, `Precio_Individual`, `Precio_Total`, `Descuento_Total`, `Ventas_Cuenta_ID_Cuenta`) VALUES (@productoname, @cantidad, @precioindi, @subtotal, @desctotal, @cuentaID)";
+            command.CommandText = "INSERT INTO `ventas_detalle`(`Producto`, `Cantidad`, `Precio_Individual`, `Precio_Total`, `Descuento_Total`, `Ventas_Cuenta_ID_Cuenta`, `ventas_Producto_ID_ventas`) VALUES (@productoname, @cantidad, @precioindi, @subtotal, @desctotal, @cuentaID, @productoID)";
             command.Parameters.AddWithValue("@productoname", NameProducto);
             command.Parameters.AddWithValue("@cantidad", Cantidad);
             command.Parameters.AddWithValue("@precioindi", Precio);
             command.Parameters.AddWithValue("@subtotal", Subtotal);
             command.Parameters.AddWithValue("@desctotal", Desctotal);
             command.Parameters.AddWithValue("@cuentaID", IDCuenta);
+            command.Parameters.AddWithValue("@productoID", IDProd);
             command.Connection = connection;
             int updateventas = command.ExecuteNonQuery();
 
@@ -591,6 +592,118 @@ namespace CosaSQLVetPrueba
             return insertcuenta;
         }
 
+        public List<MaxVentas> getMaxventas()
+        {
+            List<MaxVentas> returnThese = new List<MaxVentas>();
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT `Producto`, SUM(`Cantidad`) AS 'Cantidad Vendida' FROM `ventas_detalle` GROUP BY `ventas_Producto_ID_ventas` ORDER BY SUM(`Cantidad`) DESC";
+            command.Connection = connection;
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    MaxVentas a = new MaxVentas
+                    {
+                        Producto = reader.GetString(0),
+                        Cantidad_Ventas = reader.GetInt32(1)
+                    };
+                    returnThese.Add(a);
+                }
+            }
+            connection.Close();
+            return returnThese;
+        }
+
+        public List<MaxDineros> getMaxDineros()
+        {
+            List<MaxDineros> returnThese = new List<MaxDineros>();
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT `Producto`, SUM(`Precio_Total`) AS 'Ingresos Totales' FROM `ventas_detalle` GROUP BY `ventas_Producto_ID_ventas` ORDER BY SUM(`Precio_Total`) DESC";
+            command.Connection = connection;
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    MaxDineros a = new MaxDineros
+                    {
+                        Producto = reader.GetString(0),
+                        Cantidad_Ingresos = reader.GetFloat(1)
+                    };
+                    returnThese.Add(a);
+                }
+            }
+            connection.Close();
+            return returnThese;
+        }
+
+
+
+        public float DAOtotalingresosfl = 0;
+        public string DAOmenosventas = "si";
+        public string DAOmenosdineros = "no";
+
+
+        public int getEstadisticas()
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            float total_ingresosfl = 0;
+            int total_ventasint = 0;
+            string prodmenosdineros = "si";
+            string prodmenosventas = "si";
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT SUM(`Precio_Total`), SUM(`Cantidad`)  FROM `ventas_detalle`";
+            command.Connection = connection;
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    total_ingresosfl = reader.GetFloat(0);
+                    total_ventasint = reader.GetInt32(1);
+                }
+            }
+            DAOtotalingresosfl = total_ingresosfl;
+
+            MySqlCommand menosdineros = new MySqlCommand();
+            menosdineros.CommandText = "SELECT `Producto` FROM `ventas_detalle` GROUP BY `ventas_Producto_ID_ventas` ORDER BY SUM(`Precio_Total`) LIMIT 1";
+            menosdineros.Connection = connection;
+            using (MySqlDataReader reader = menosdineros.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    prodmenosdineros = reader.GetString(0);
+                }
+            }
+
+            DAOmenosdineros = prodmenosdineros;
+
+            MySqlCommand menosventas = new MySqlCommand();
+            menosventas.CommandText = "SELECT `Producto` FROM `ventas_detalle` GROUP BY `ventas_Producto_ID_ventas` ORDER BY SUM(`Cantidad`) LIMIT 1";
+            menosventas.Connection = connection;
+            using (MySqlDataReader reader = menosventas.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    prodmenosventas = reader.GetString(0);
+                }
+            }
+            DAOmenosventas = prodmenosventas;
+
+            connection.Close();
+            return total_ventasint;
+        }
+
+        
 
 
     }
