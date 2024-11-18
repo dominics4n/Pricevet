@@ -703,8 +703,190 @@ namespace CosaSQLVetPrueba
             return total_ventasint;
         }
 
-        
+        public List<Productos> buscarProductosMod(string searchterm)
+        {
+            List<Productos> returnThese = new List<Productos>();
 
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            String searchWildPhrase = "%" + searchterm + "%";
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT `ID_Productos`, `Nombre_Producto`,  `Presentacion_Producto`, `Proveedor_Producto`, `Precio_Publico`, `Precio_Farmacia`, `Descuento_Porcentaje`, `Existencias` FROM `productos` WHERE Nombre_Producto LIKE @search";
+            command.Parameters.AddWithValue("@search", searchWildPhrase);
+            command.Connection = connection;
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+
+                    Productos p = new Productos
+                    {
+                        ID_Producto = reader.GetInt32(0),
+                        Nombre_producto = reader.GetString(1),
+                        Presentacion_producto = reader.GetString(2),
+                        Proveedor_producto = reader.GetString(3),
+                        Precio_publico = reader.GetFloat(4),
+                        Precio_farmacia = reader.GetFloat(5),
+                        Descuento_Porcentaje = reader.GetInt32(6),
+                        Existencias = reader.GetInt32(7)
+                    };
+                    returnThese.Add(p);
+                }
+            }
+            connection.Close();
+            return returnThese;
+        }
+
+        public List<Productos_select> getProductoSelect(int ProductoID)
+        {
+            List<Productos_select> returnThese = new List<Productos_select>();
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT `ID_Productos`, `Nombre_Producto`, `Presentacion_Producto`, `Precio_Publico`, `Precio_Farmacia`, `Descuento_Porcentaje`, `Existencias` FROM `productos` WHERE `ID_Productos` = @productoid";
+            command.Parameters.AddWithValue("@productoid", ProductoID);
+            command.Connection = connection;
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Productos_select p = new Productos_select
+                    {
+                        ID_Producto = reader.GetInt32(0),
+                        Nombre_producto = reader.GetString(1),
+                        Presentacion_producto = reader.GetString(2),
+                        Precio_publico = reader.GetFloat(3),
+                        Precio_farmacia = reader.GetFloat(4),
+                        Descuento_Porcentaje = reader.GetInt32(5),
+                        Existencias = reader.GetInt32(6)
+                    };
+                     returnThese.Add(p);
+                }
+            }
+            connection.Close();
+            return returnThese;
+        }
+
+        internal int updateExistencias(int Cantidad, int IDVenta)
+        {
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "UPDATE `productos` SET `Existencias` = @cantidad WHERE `ID_Productos` = @ventaID";
+            command.Parameters.AddWithValue("@ventaID", IDVenta);
+            command.Parameters.AddWithValue("@cantidad", Cantidad);
+            command.Connection = connection;
+            int updateexistencias = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updateexistencias;
+        }
+
+        internal int updatepublic_cost(float publicosto, int IDVenta)
+        {
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "UPDATE `productos` SET `Precio_Publico` = @publicosto WHERE `ID_Productos` = @ventaID";
+            command.Parameters.AddWithValue("@ventaID", IDVenta);
+            command.Parameters.AddWithValue("@publicosto", publicosto);
+            command.Connection = connection;
+            int updatecostopublico = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updatecostopublico;
+        }
+
+        internal int updatemedic_cost(float medicosto, int IDVenta)
+        {
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "UPDATE `productos` SET `Precio_Farmacia` = @medicosto WHERE `ID_Productos` = @ventaID";
+            command.Parameters.AddWithValue("@ventaID", IDVenta);
+            command.Parameters.AddWithValue("@medicosto", medicosto);
+            command.Connection = connection;
+            int updatecostofarmacia = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updatecostofarmacia;
+        }
+        internal int updateDescuento(int Descuento, int IDVenta)
+        {
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "UPDATE `productos` SET `Descuento_Porcentaje` = @descuento WHERE `ID_Productos` = @ventaID";
+            command.Parameters.AddWithValue("@ventaID", IDVenta);
+            command.Parameters.AddWithValue("@descuento", Descuento);
+            command.Connection = connection;
+            int updatedescuento = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updatedescuento;
+        }
+
+        internal int addProducto(string NameProd, string Presentacion, string ProveedorName, int ProveedorID, float Publicosto, float Medicosto, int Cantidad, int Descuento)
+        {
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "INSERT INTO `productos`(`Nombre_Producto`, `Proveedor_Producto`, `Presentacion_Producto`, `Precio_Publico`, `Precio_Farmacia`, `Descuento_Porcentaje`, `Existencias`, `proveedores_ID_Proveedores`) VALUES (@ProdName, @proveeName, @presentacion, @publicosto, @medicosto, @descuento, @cantidad, @proveeID)";
+            command.Parameters.AddWithValue("@ProdName", NameProd);
+            command.Parameters.AddWithValue("@presentacion", Presentacion);
+            command.Parameters.AddWithValue("@proveeName", ProveedorName);
+            command.Parameters.AddWithValue("@proveeID", ProveedorID);
+            command.Parameters.AddWithValue("@publicosto", Publicosto);
+            command.Parameters.AddWithValue("@medicosto", Medicosto);
+            command.Parameters.AddWithValue("@cantidad", Cantidad);
+            command.Parameters.AddWithValue("@descuento", Descuento);
+            command.Connection = connection;
+            int updatedescuento = command.ExecuteNonQuery();
+
+            connection.Close();
+            return updatedescuento;
+        }
+
+        internal int updateExistenciasminus(int IDProducto, int Cantidadmenos)
+        {
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            int Existencias = 100;
+            MySqlCommand getExistenciasprod = new MySqlCommand();
+            getExistenciasprod.CommandText = "SELECT `Existencias` FROM `productos` WHERE `ID_Productos` = @productoID";
+            getExistenciasprod.Parameters.AddWithValue("@productoID", IDProducto);
+            getExistenciasprod.Connection = connection;
+            using (MySqlDataReader reader = getExistenciasprod.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Existencias = reader.GetInt32(0);
+                }
+            }
+            Existencias = Existencias - Cantidadmenos;
+            MySqlCommand updateexistenciasprod = new MySqlCommand();
+            updateexistenciasprod.CommandText = "UPDATE `productos` SET `Existencias`= @menoscantidad WHERE `ID_Productos` = @productoID";
+            updateexistenciasprod.Parameters.AddWithValue("@menoscantidad", Existencias);
+            updateexistenciasprod.Parameters.AddWithValue("@productoID", IDProducto);
+            updateexistenciasprod.Connection = connection;
+            int updateinventario = updateexistenciasprod.ExecuteNonQuery();
+            connection.Close();
+            return updateinventario;
+        }
 
     }
 }

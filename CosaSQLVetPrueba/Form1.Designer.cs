@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
@@ -39,8 +38,12 @@
             DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle29 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle30 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle31 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle32 = new DataGridViewCellStyle();
             Informes = new TabPage();
             materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             materialButton3 = new MaterialSkin.Controls.MaterialButton();
@@ -100,6 +103,14 @@
             dataGridView7 = new DataGridView();
             tabPage5 = new TabPage();
             groupBox3 = new GroupBox();
+            label_menosdinero = new MaterialSkin.Controls.MaterialLabel();
+            label_menosvendido = new MaterialSkin.Controls.MaterialLabel();
+            label_totalventas = new MaterialSkin.Controls.MaterialLabel();
+            label_totaldinero = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel26 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel25 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
             cartesianChart2 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
@@ -109,14 +120,48 @@
             materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
             dataGridView11 = new DataGridView();
             cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
-            materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel25 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel26 = new MaterialSkin.Controls.MaterialLabel();
-            label_totaldinero = new MaterialSkin.Controls.MaterialLabel();
-            label_totalventas = new MaterialSkin.Controls.MaterialLabel();
-            label_menosvendido = new MaterialSkin.Controls.MaterialLabel();
-            label_menosdinero = new MaterialSkin.Controls.MaterialLabel();
+            tabPage6 = new TabPage();
+            groupBox5 = new GroupBox();
+            materialButton12 = new MaterialSkin.Controls.MaterialButton();
+            materialButton11 = new MaterialSkin.Controls.MaterialButton();
+            materialButton10 = new MaterialSkin.Controls.MaterialButton();
+            materialButton9 = new MaterialSkin.Controls.MaterialButton();
+            materialLabel34 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel32 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel31 = new MaterialSkin.Controls.MaterialLabel();
+            txt_update_existencias = new MaterialSkin.Controls.MaterialTextBox();
+            txt_update_descuento = new MaterialSkin.Controls.MaterialTextBox();
+            txt_update_farmacia = new MaterialSkin.Controls.MaterialTextBox();
+            txt_update_publico = new MaterialSkin.Controls.MaterialTextBox();
+            groupBox4 = new GroupBox();
+            materialButton14 = new MaterialSkin.Controls.MaterialButton();
+            materialLabel42 = new MaterialSkin.Controls.MaterialLabel();
+            materialButton13 = new MaterialSkin.Controls.MaterialButton();
+            dataGridView15 = new DataGridView();
+            materialLabel41 = new MaterialSkin.Controls.MaterialLabel();
+            materialTextBox22 = new MaterialSkin.Controls.MaterialTextBox();
+            materialLabel39 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel40 = new MaterialSkin.Controls.MaterialLabel();
+            txt_new_existencias = new MaterialSkin.Controls.MaterialTextBox();
+            txt_new_descuento = new MaterialSkin.Controls.MaterialTextBox();
+            materialLabel35 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel36 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel37 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel38 = new MaterialSkin.Controls.MaterialLabel();
+            txt_new_name = new MaterialSkin.Controls.MaterialTextBox();
+            txt_new_farmacia = new MaterialSkin.Controls.MaterialTextBox();
+            txt_new_publico = new MaterialSkin.Controls.MaterialTextBox();
+            txt_new_presentacion = new MaterialSkin.Controls.MaterialTextBox();
+            materialLabel30 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
+            dataGridView13 = new DataGridView();
+            materialLabel29 = new MaterialSkin.Controls.MaterialLabel();
+            materialButton8 = new MaterialSkin.Controls.MaterialButton();
+            materialTextBox11 = new MaterialSkin.Controls.MaterialTextBox();
+            dataGridView14 = new DataGridView();
+            materialLabel28 = new MaterialSkin.Controls.MaterialLabel();
+            label_proveedor_seleccionado = new MaterialSkin.Controls.MaterialLabel();
             Informes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
             tabPage2.SuspendLayout();
@@ -139,6 +184,12 @@
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView11).BeginInit();
+            tabPage6.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView14).BeginInit();
             SuspendLayout();
             // 
             // Informes
@@ -211,14 +262,14 @@
             dataGridView4.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView4.BackgroundColor = Color.White;
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = SystemColors.Window;
-            dataGridViewCellStyle14.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle14.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
-            dataGridView4.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = SystemColors.Window;
+            dataGridViewCellStyle17.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle17.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
+            dataGridView4.DefaultCellStyle = dataGridViewCellStyle17;
             dataGridView4.Location = new Point(61, 92);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.Size = new Size(1796, 639);
@@ -359,14 +410,14 @@
             dataGridView3.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView3.BackgroundColor = Color.White;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = SystemColors.Window;
-            dataGridViewCellStyle15.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle15.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle15.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
-            dataGridView3.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = SystemColors.Window;
+            dataGridViewCellStyle18.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle18.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle18.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
+            dataGridView3.DefaultCellStyle = dataGridViewCellStyle18;
             dataGridView3.Location = new Point(31, 106);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.Size = new Size(1843, 842);
@@ -381,6 +432,7 @@
             materialTabControl1.Controls.Add(tabPage1);
             materialTabControl1.Controls.Add(tabPage3);
             materialTabControl1.Controls.Add(tabPage5);
+            materialTabControl1.Controls.Add(tabPage6);
             materialTabControl1.Depth = 0;
             materialTabControl1.Dock = DockStyle.Left;
             materialTabControl1.HotTrack = true;
@@ -461,14 +513,14 @@
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView2.BackgroundColor = Color.White;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = SystemColors.Window;
-            dataGridViewCellStyle18.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle18.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle18.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
-            dataGridView2.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = SystemColors.Window;
+            dataGridViewCellStyle19.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle19.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle19.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.False;
+            dataGridView2.DefaultCellStyle = dataGridViewCellStyle19;
             dataGridView2.Location = new Point(669, 53);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(1211, 863);
@@ -519,23 +571,23 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = Color.White;
-            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle19.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle19.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle19.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.False;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = SystemColors.Window;
+            dataGridViewCellStyle20.BackColor = SystemColors.ActiveCaptionText;
             dataGridViewCellStyle20.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle20.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle20.ForeColor = SystemColors.Window;
             dataGridViewCellStyle20.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = SystemColors.Window;
+            dataGridViewCellStyle21.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle21.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle21.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle21;
             dataGridView1.GridColor = SystemColors.GrayText;
             dataGridView1.Location = new Point(41, 118);
             dataGridView1.Name = "dataGridView1";
@@ -615,14 +667,14 @@
             dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView6.BackgroundColor = Color.White;
             dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = SystemColors.Window;
-            dataGridViewCellStyle21.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle21.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle21.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.False;
-            dataGridView6.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = SystemColors.Window;
+            dataGridViewCellStyle22.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle22.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle22.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.False;
+            dataGridView6.DefaultCellStyle = dataGridViewCellStyle22;
             dataGridView6.Location = new Point(306, 31);
             dataGridView6.Name = "dataGridView6";
             dataGridView6.Size = new Size(1478, 718);
@@ -635,14 +687,14 @@
             dataGridView5.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView5.BackgroundColor = Color.White;
             dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = SystemColors.Window;
-            dataGridViewCellStyle22.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle22.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle22.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.False;
-            dataGridView5.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = SystemColors.Window;
+            dataGridViewCellStyle23.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle23.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
+            dataGridView5.DefaultCellStyle = dataGridViewCellStyle23;
             dataGridView5.Location = new Point(24, 112);
             dataGridView5.Name = "dataGridView5";
             dataGridView5.RowHeadersVisible = false;
@@ -884,14 +936,14 @@
             dataGridView10.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView10.BackgroundColor = SystemColors.Window;
             dataGridView10.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = SystemColors.Window;
-            dataGridViewCellStyle23.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle23.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
-            dataGridView10.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = SystemColors.Window;
+            dataGridViewCellStyle24.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle24.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle24.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.False;
+            dataGridView10.DefaultCellStyle = dataGridViewCellStyle24;
             dataGridView10.GridColor = SystemColors.Window;
             dataGridView10.Location = new Point(56, 33);
             dataGridView10.Name = "dataGridView10";
@@ -929,14 +981,14 @@
             dataGridView9.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView9.BackgroundColor = SystemColors.Window;
             dataGridView9.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = SystemColors.Window;
-            dataGridViewCellStyle24.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle24.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle24.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.False;
-            dataGridView9.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle25.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = SystemColors.Window;
+            dataGridViewCellStyle25.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle25.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle25.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = DataGridViewTriState.False;
+            dataGridView9.DefaultCellStyle = dataGridViewCellStyle25;
             dataGridView9.Location = new Point(56, 268);
             dataGridView9.Name = "dataGridView9";
             dataGridView9.Size = new Size(1266, 54);
@@ -1049,14 +1101,14 @@
             dataGridView8.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView8.BackgroundColor = Color.White;
             dataGridView8.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle25.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = SystemColors.Window;
-            dataGridViewCellStyle25.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle25.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle25.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = DataGridViewTriState.False;
-            dataGridView8.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = SystemColors.Window;
+            dataGridViewCellStyle26.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle26.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle26.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.False;
+            dataGridView8.DefaultCellStyle = dataGridViewCellStyle26;
             dataGridView8.Location = new Point(397, 114);
             dataGridView8.Name = "dataGridView8";
             dataGridView8.Size = new Size(1430, 119);
@@ -1068,14 +1120,14 @@
             dataGridView7.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView7.BackgroundColor = Color.White;
             dataGridView7.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = SystemColors.Window;
-            dataGridViewCellStyle26.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle26.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle26.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.False;
-            dataGridView7.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = SystemColors.Window;
+            dataGridViewCellStyle27.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle27.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle27.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.False;
+            dataGridView7.DefaultCellStyle = dataGridViewCellStyle27;
             dataGridView7.Location = new Point(56, 357);
             dataGridView7.Name = "dataGridView7";
             dataGridView7.Size = new Size(1266, 586);
@@ -1121,6 +1173,102 @@
             groupBox3.TabIndex = 8;
             groupBox3.TabStop = false;
             groupBox3.Text = " ";
+            // 
+            // label_menosdinero
+            // 
+            label_menosdinero.AutoSize = true;
+            label_menosdinero.Depth = 0;
+            label_menosdinero.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label_menosdinero.Location = new Point(398, 224);
+            label_menosdinero.MouseState = MaterialSkin.MouseState.HOVER;
+            label_menosdinero.Name = "label_menosdinero";
+            label_menosdinero.Size = new Size(10, 19);
+            label_menosdinero.TabIndex = 9;
+            label_menosdinero.Text = "0";
+            // 
+            // label_menosvendido
+            // 
+            label_menosvendido.AutoSize = true;
+            label_menosvendido.Depth = 0;
+            label_menosvendido.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label_menosvendido.Location = new Point(398, 178);
+            label_menosvendido.MouseState = MaterialSkin.MouseState.HOVER;
+            label_menosvendido.Name = "label_menosvendido";
+            label_menosvendido.Size = new Size(10, 19);
+            label_menosvendido.TabIndex = 8;
+            label_menosvendido.Text = "0";
+            // 
+            // label_totalventas
+            // 
+            label_totalventas.AutoSize = true;
+            label_totalventas.Depth = 0;
+            label_totalventas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label_totalventas.Location = new Point(398, 132);
+            label_totalventas.MouseState = MaterialSkin.MouseState.HOVER;
+            label_totalventas.Name = "label_totalventas";
+            label_totalventas.Size = new Size(10, 19);
+            label_totalventas.TabIndex = 6;
+            label_totalventas.Text = "0";
+            // 
+            // label_totaldinero
+            // 
+            label_totaldinero.AutoSize = true;
+            label_totaldinero.Depth = 0;
+            label_totaldinero.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label_totaldinero.Location = new Point(398, 86);
+            label_totaldinero.MouseState = MaterialSkin.MouseState.HOVER;
+            label_totaldinero.Name = "label_totaldinero";
+            label_totaldinero.Size = new Size(10, 19);
+            label_totaldinero.TabIndex = 5;
+            label_totaldinero.Text = "0";
+            // 
+            // materialLabel26
+            // 
+            materialLabel26.AutoSize = true;
+            materialLabel26.Depth = 0;
+            materialLabel26.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel26.Location = new Point(22, 132);
+            materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel26.Name = "materialLabel26";
+            materialLabel26.Size = new Size(205, 19);
+            materialLabel26.TabIndex = 4;
+            materialLabel26.Text = "Total de Productos Vendidos";
+            // 
+            // materialLabel25
+            // 
+            materialLabel25.AutoSize = true;
+            materialLabel25.Depth = 0;
+            materialLabel25.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel25.Location = new Point(22, 224);
+            materialLabel25.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel25.Name = "materialLabel25";
+            materialLabel25.Size = new Size(240, 19);
+            materialLabel25.TabIndex = 3;
+            materialLabel25.Text = "Producto con Menores Ganancias";
+            // 
+            // materialLabel24
+            // 
+            materialLabel24.AutoSize = true;
+            materialLabel24.Depth = 0;
+            materialLabel24.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel24.Location = new Point(22, 178);
+            materialLabel24.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel24.Name = "materialLabel24";
+            materialLabel24.Size = new Size(179, 19);
+            materialLabel24.TabIndex = 2;
+            materialLabel24.Text = "Producto Menos Vendido";
+            // 
+            // materialLabel23
+            // 
+            materialLabel23.AutoSize = true;
+            materialLabel23.Depth = 0;
+            materialLabel23.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel23.Location = new Point(22, 86);
+            materialLabel23.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel23.Name = "materialLabel23";
+            materialLabel23.Size = new Size(183, 19);
+            materialLabel23.TabIndex = 1;
+            materialLabel23.Text = "Numero Total de Ingresos";
             // 
             // materialLabel22
             // 
@@ -1171,14 +1319,14 @@
             dataGridView12.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView12.BackgroundColor = SystemColors.Window;
             dataGridView12.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = SystemColors.Window;
-            dataGridViewCellStyle16.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle16.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle16.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.False;
-            dataGridView12.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle28.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = SystemColors.Window;
+            dataGridViewCellStyle28.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle28.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle28.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = DataGridViewTriState.False;
+            dataGridView12.DefaultCellStyle = dataGridViewCellStyle28;
             dataGridView12.Location = new Point(618, 34);
             dataGridView12.Name = "dataGridView12";
             dataGridView12.Size = new Size(556, 352);
@@ -1214,14 +1362,14 @@
             dataGridView11.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView11.BackgroundColor = SystemColors.Window;
             dataGridView11.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = SystemColors.Window;
-            dataGridViewCellStyle17.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle17.ForeColor = Color.DeepPink;
-            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
-            dataGridView11.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = SystemColors.Window;
+            dataGridViewCellStyle29.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle29.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle29.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = DataGridViewTriState.False;
+            dataGridView11.DefaultCellStyle = dataGridViewCellStyle29;
             dataGridView11.Location = new Point(32, 34);
             dataGridView11.Name = "dataGridView11";
             dataGridView11.Size = new Size(556, 352);
@@ -1235,101 +1383,687 @@
             cartesianChart1.TabIndex = 0;
             cartesianChart1.Load += cartesianChart1_Load;
             // 
-            // materialLabel23
+            // tabPage6
             // 
-            materialLabel23.AutoSize = true;
-            materialLabel23.Depth = 0;
-            materialLabel23.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel23.Location = new Point(22, 86);
-            materialLabel23.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel23.Name = "materialLabel23";
-            materialLabel23.Size = new Size(183, 19);
-            materialLabel23.TabIndex = 1;
-            materialLabel23.Text = "Numero Total de Ingresos";
+            tabPage6.Controls.Add(groupBox5);
+            tabPage6.Controls.Add(groupBox4);
+            tabPage6.Controls.Add(materialLabel30);
+            tabPage6.Controls.Add(materialLabel27);
+            tabPage6.Controls.Add(dataGridView13);
+            tabPage6.Controls.Add(materialLabel29);
+            tabPage6.Controls.Add(materialButton8);
+            tabPage6.Controls.Add(materialTextBox11);
+            tabPage6.Controls.Add(dataGridView14);
+            tabPage6.Location = new Point(4, 24);
+            tabPage6.Name = "tabPage6";
+            tabPage6.Padding = new Padding(3);
+            tabPage6.Size = new Size(1906, 1005);
+            tabPage6.TabIndex = 6;
+            tabPage6.Text = "Actualizar Inventario";
+            tabPage6.UseVisualStyleBackColor = true;
             // 
-            // materialLabel24
+            // groupBox5
             // 
-            materialLabel24.AutoSize = true;
-            materialLabel24.Depth = 0;
-            materialLabel24.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel24.Location = new Point(22, 178);
-            materialLabel24.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel24.Name = "materialLabel24";
-            materialLabel24.Size = new Size(179, 19);
-            materialLabel24.TabIndex = 2;
-            materialLabel24.Text = "Producto Menos Vendido";
+            groupBox5.BackColor = Color.White;
+            groupBox5.Controls.Add(materialButton12);
+            groupBox5.Controls.Add(materialButton11);
+            groupBox5.Controls.Add(materialButton10);
+            groupBox5.Controls.Add(materialButton9);
+            groupBox5.Controls.Add(materialLabel34);
+            groupBox5.Controls.Add(materialLabel33);
+            groupBox5.Controls.Add(materialLabel32);
+            groupBox5.Controls.Add(materialLabel31);
+            groupBox5.Controls.Add(txt_update_existencias);
+            groupBox5.Controls.Add(txt_update_descuento);
+            groupBox5.Controls.Add(txt_update_farmacia);
+            groupBox5.Controls.Add(txt_update_publico);
+            groupBox5.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox5.Location = new Point(39, 378);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(348, 512);
+            groupBox5.TabIndex = 32;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Actualizar Seleccionado";
             // 
-            // materialLabel25
+            // materialButton12
             // 
-            materialLabel25.AutoSize = true;
-            materialLabel25.Depth = 0;
-            materialLabel25.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel25.Location = new Point(22, 224);
-            materialLabel25.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel25.Name = "materialLabel25";
-            materialLabel25.Size = new Size(240, 19);
-            materialLabel25.TabIndex = 3;
-            materialLabel25.Text = "Producto con Menores Ganancias";
+            materialButton12.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton12.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton12.Depth = 0;
+            materialButton12.HighEmphasis = true;
+            materialButton12.Icon = null;
+            materialButton12.Location = new Point(184, 432);
+            materialButton12.Margin = new Padding(4, 6, 4, 6);
+            materialButton12.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton12.Name = "materialButton12";
+            materialButton12.NoAccentTextColor = Color.Empty;
+            materialButton12.Size = new Size(109, 36);
+            materialButton12.TabIndex = 30;
+            materialButton12.Text = "Actualizar";
+            materialButton12.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton12.UseAccentColor = false;
+            materialButton12.UseVisualStyleBackColor = true;
+            materialButton12.Click += materialButton12_Click;
             // 
-            // materialLabel26
+            // materialButton11
             // 
-            materialLabel26.AutoSize = true;
-            materialLabel26.Depth = 0;
-            materialLabel26.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel26.Location = new Point(22, 132);
-            materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel26.Name = "materialLabel26";
-            materialLabel26.Size = new Size(205, 19);
-            materialLabel26.TabIndex = 4;
-            materialLabel26.Text = "Total de Productos Vendidos";
+            materialButton11.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton11.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton11.Depth = 0;
+            materialButton11.HighEmphasis = true;
+            materialButton11.Icon = null;
+            materialButton11.Location = new Point(184, 317);
+            materialButton11.Margin = new Padding(4, 6, 4, 6);
+            materialButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton11.Name = "materialButton11";
+            materialButton11.NoAccentTextColor = Color.Empty;
+            materialButton11.Size = new Size(109, 36);
+            materialButton11.TabIndex = 29;
+            materialButton11.Text = "Actualizar";
+            materialButton11.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton11.UseAccentColor = false;
+            materialButton11.UseVisualStyleBackColor = true;
+            materialButton11.Click += materialButton11_Click;
             // 
-            // label_totaldinero
+            // materialButton10
             // 
-            label_totaldinero.AutoSize = true;
-            label_totaldinero.Depth = 0;
-            label_totaldinero.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label_totaldinero.Location = new Point(398, 86);
-            label_totaldinero.MouseState = MaterialSkin.MouseState.HOVER;
-            label_totaldinero.Name = "label_totaldinero";
-            label_totaldinero.Size = new Size(10, 19);
-            label_totaldinero.TabIndex = 5;
-            label_totaldinero.Text = "0";
+            materialButton10.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton10.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton10.Depth = 0;
+            materialButton10.HighEmphasis = true;
+            materialButton10.Icon = null;
+            materialButton10.Location = new Point(184, 207);
+            materialButton10.Margin = new Padding(4, 6, 4, 6);
+            materialButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton10.Name = "materialButton10";
+            materialButton10.NoAccentTextColor = Color.Empty;
+            materialButton10.Size = new Size(109, 36);
+            materialButton10.TabIndex = 28;
+            materialButton10.Text = "Actualizar";
+            materialButton10.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton10.UseAccentColor = false;
+            materialButton10.UseVisualStyleBackColor = true;
+            materialButton10.Click += materialButton10_Click;
             // 
-            // label_totalventas
+            // materialButton9
             // 
-            label_totalventas.AutoSize = true;
-            label_totalventas.Depth = 0;
-            label_totalventas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label_totalventas.Location = new Point(398, 132);
-            label_totalventas.MouseState = MaterialSkin.MouseState.HOVER;
-            label_totalventas.Name = "label_totalventas";
-            label_totalventas.Size = new Size(10, 19);
-            label_totalventas.TabIndex = 6;
-            label_totalventas.Text = "0";
+            materialButton9.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton9.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton9.Depth = 0;
+            materialButton9.HighEmphasis = true;
+            materialButton9.Icon = null;
+            materialButton9.Location = new Point(184, 95);
+            materialButton9.Margin = new Padding(4, 6, 4, 6);
+            materialButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton9.Name = "materialButton9";
+            materialButton9.NoAccentTextColor = Color.Empty;
+            materialButton9.Size = new Size(109, 36);
+            materialButton9.TabIndex = 27;
+            materialButton9.Text = "Actualizar";
+            materialButton9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton9.UseAccentColor = false;
+            materialButton9.UseVisualStyleBackColor = true;
+            materialButton9.Click += materialButton9_Click;
             // 
-            // label_menosvendido
+            // materialLabel34
             // 
-            label_menosvendido.AutoSize = true;
-            label_menosvendido.Depth = 0;
-            label_menosvendido.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label_menosvendido.Location = new Point(398, 178);
-            label_menosvendido.MouseState = MaterialSkin.MouseState.HOVER;
-            label_menosvendido.Name = "label_menosvendido";
-            label_menosvendido.Size = new Size(10, 19);
-            label_menosvendido.TabIndex = 8;
-            label_menosvendido.Text = "0";
+            materialLabel34.AutoSize = true;
+            materialLabel34.Depth = 0;
+            materialLabel34.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel34.Location = new Point(46, 59);
+            materialLabel34.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel34.Name = "materialLabel34";
+            materialLabel34.Size = new Size(156, 19);
+            materialLabel34.TabIndex = 26;
+            materialLabel34.Text = "Actualizar Existencias";
             // 
-            // label_menosdinero
+            // materialLabel33
             // 
-            label_menosdinero.AutoSize = true;
-            label_menosdinero.Depth = 0;
-            label_menosdinero.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label_menosdinero.Location = new Point(398, 224);
-            label_menosdinero.MouseState = MaterialSkin.MouseState.HOVER;
-            label_menosdinero.Name = "label_menosdinero";
-            label_menosdinero.Size = new Size(10, 19);
-            label_menosdinero.TabIndex = 9;
-            label_menosdinero.Text = "0";
+            materialLabel33.AutoSize = true;
+            materialLabel33.Depth = 0;
+            materialLabel33.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel33.Location = new Point(46, 396);
+            materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel33.Name = "materialLabel33";
+            materialLabel33.Size = new Size(249, 19);
+            materialLabel33.TabIndex = 25;
+            materialLabel33.Text = "Actualizar Porcentaje de descuento";
+            // 
+            // materialLabel32
+            // 
+            materialLabel32.AutoSize = true;
+            materialLabel32.Depth = 0;
+            materialLabel32.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel32.Location = new Point(46, 281);
+            materialLabel32.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel32.Name = "materialLabel32";
+            materialLabel32.Size = new Size(191, 19);
+            materialLabel32.TabIndex = 24;
+            materialLabel32.Text = "Actualizar Precio Farmacia";
+            // 
+            // materialLabel31
+            // 
+            materialLabel31.AutoSize = true;
+            materialLabel31.Depth = 0;
+            materialLabel31.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel31.Location = new Point(46, 171);
+            materialLabel31.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel31.Name = "materialLabel31";
+            materialLabel31.Size = new Size(177, 19);
+            materialLabel31.TabIndex = 23;
+            materialLabel31.Text = "Actualizar Precio Publico";
+            // 
+            // txt_update_existencias
+            // 
+            txt_update_existencias.AnimateReadOnly = false;
+            txt_update_existencias.BorderStyle = BorderStyle.None;
+            txt_update_existencias.Depth = 0;
+            txt_update_existencias.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_update_existencias.LeadingIcon = null;
+            txt_update_existencias.Location = new Point(46, 81);
+            txt_update_existencias.MaxLength = 50;
+            txt_update_existencias.MouseState = MaterialSkin.MouseState.OUT;
+            txt_update_existencias.Multiline = false;
+            txt_update_existencias.Name = "txt_update_existencias";
+            txt_update_existencias.Size = new Size(100, 50);
+            txt_update_existencias.TabIndex = 22;
+            txt_update_existencias.Text = "";
+            txt_update_existencias.TrailingIcon = null;
+            // 
+            // txt_update_descuento
+            // 
+            txt_update_descuento.AnimateReadOnly = false;
+            txt_update_descuento.BorderStyle = BorderStyle.None;
+            txt_update_descuento.Depth = 0;
+            txt_update_descuento.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_update_descuento.LeadingIcon = null;
+            txt_update_descuento.Location = new Point(46, 418);
+            txt_update_descuento.MaxLength = 50;
+            txt_update_descuento.MouseState = MaterialSkin.MouseState.OUT;
+            txt_update_descuento.Multiline = false;
+            txt_update_descuento.Name = "txt_update_descuento";
+            txt_update_descuento.Size = new Size(100, 50);
+            txt_update_descuento.TabIndex = 21;
+            txt_update_descuento.Text = "";
+            txt_update_descuento.TrailingIcon = null;
+            txt_update_descuento.TextChanged += materialTextBox15_TextChanged;
+            // 
+            // txt_update_farmacia
+            // 
+            txt_update_farmacia.AnimateReadOnly = false;
+            txt_update_farmacia.BorderStyle = BorderStyle.None;
+            txt_update_farmacia.Depth = 0;
+            txt_update_farmacia.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_update_farmacia.LeadingIcon = null;
+            txt_update_farmacia.Location = new Point(46, 303);
+            txt_update_farmacia.MaxLength = 50;
+            txt_update_farmacia.MouseState = MaterialSkin.MouseState.OUT;
+            txt_update_farmacia.Multiline = false;
+            txt_update_farmacia.Name = "txt_update_farmacia";
+            txt_update_farmacia.Size = new Size(100, 50);
+            txt_update_farmacia.TabIndex = 20;
+            txt_update_farmacia.Text = "";
+            txt_update_farmacia.TrailingIcon = null;
+            // 
+            // txt_update_publico
+            // 
+            txt_update_publico.AnimateReadOnly = false;
+            txt_update_publico.BorderStyle = BorderStyle.None;
+            txt_update_publico.Depth = 0;
+            txt_update_publico.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_update_publico.LeadingIcon = null;
+            txt_update_publico.Location = new Point(46, 193);
+            txt_update_publico.MaxLength = 50;
+            txt_update_publico.MouseState = MaterialSkin.MouseState.OUT;
+            txt_update_publico.Multiline = false;
+            txt_update_publico.Name = "txt_update_publico";
+            txt_update_publico.Size = new Size(100, 50);
+            txt_update_publico.TabIndex = 19;
+            txt_update_publico.Text = "";
+            txt_update_publico.TrailingIcon = null;
+            // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = Color.White;
+            groupBox4.Controls.Add(label_proveedor_seleccionado);
+            groupBox4.Controls.Add(materialLabel28);
+            groupBox4.Controls.Add(materialButton14);
+            groupBox4.Controls.Add(materialLabel42);
+            groupBox4.Controls.Add(materialButton13);
+            groupBox4.Controls.Add(dataGridView15);
+            groupBox4.Controls.Add(materialLabel41);
+            groupBox4.Controls.Add(materialTextBox22);
+            groupBox4.Controls.Add(materialLabel39);
+            groupBox4.Controls.Add(materialLabel40);
+            groupBox4.Controls.Add(txt_new_existencias);
+            groupBox4.Controls.Add(txt_new_descuento);
+            groupBox4.Controls.Add(materialLabel35);
+            groupBox4.Controls.Add(materialLabel36);
+            groupBox4.Controls.Add(materialLabel37);
+            groupBox4.Controls.Add(materialLabel38);
+            groupBox4.Controls.Add(txt_new_name);
+            groupBox4.Controls.Add(txt_new_farmacia);
+            groupBox4.Controls.Add(txt_new_publico);
+            groupBox4.Controls.Add(txt_new_presentacion);
+            groupBox4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox4.Location = new Point(614, 378);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(740, 445);
+            groupBox4.TabIndex = 31;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Agregar Nuevo Producto";
+            groupBox4.Enter += groupBox4_Enter;
+            // 
+            // materialButton14
+            // 
+            materialButton14.AutoSize = false;
+            materialButton14.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton14.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton14.Depth = 0;
+            materialButton14.HighEmphasis = true;
+            materialButton14.Icon = null;
+            materialButton14.Location = new Point(565, 359);
+            materialButton14.Margin = new Padding(4, 6, 4, 6);
+            materialButton14.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton14.Name = "materialButton14";
+            materialButton14.NoAccentTextColor = Color.Empty;
+            materialButton14.Size = new Size(133, 46);
+            materialButton14.TabIndex = 32;
+            materialButton14.Text = "     Agregar     ";
+            materialButton14.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton14.UseAccentColor = false;
+            materialButton14.UseVisualStyleBackColor = true;
+            materialButton14.Click += materialButton14_Click;
+            // 
+            // materialLabel42
+            // 
+            materialLabel42.AutoSize = true;
+            materialLabel42.Depth = 0;
+            materialLabel42.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel42.Location = new Point(209, 254);
+            materialLabel42.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel42.Name = "materialLabel42";
+            materialLabel42.Size = new Size(158, 19);
+            materialLabel42.TabIndex = 43;
+            materialLabel42.Text = "Seleccionar Proveedor";
+            // 
+            // materialButton13
+            // 
+            materialButton13.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton13.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton13.Depth = 0;
+            materialButton13.HighEmphasis = true;
+            materialButton13.Icon = null;
+            materialButton13.Location = new Point(50, 369);
+            materialButton13.Margin = new Padding(4, 6, 4, 6);
+            materialButton13.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton13.Name = "materialButton13";
+            materialButton13.NoAccentTextColor = Color.Empty;
+            materialButton13.Size = new Size(99, 36);
+            materialButton13.TabIndex = 42;
+            materialButton13.Text = "      Buscar      ";
+            materialButton13.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton13.UseAccentColor = false;
+            materialButton13.UseVisualStyleBackColor = true;
+            materialButton13.Click += materialButton13_Click;
+            // 
+            // dataGridView15
+            // 
+            dataGridView15.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView15.BackgroundColor = SystemColors.Window;
+            dataGridView15.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle30.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = SystemColors.Window;
+            dataGridViewCellStyle30.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle30.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle30.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = DataGridViewTriState.False;
+            dataGridView15.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridView15.Location = new Point(209, 276);
+            dataGridView15.Name = "dataGridView15";
+            dataGridView15.Size = new Size(313, 129);
+            dataGridView15.TabIndex = 41;
+            dataGridView15.CellContentClick += dataGridView15_CellContentClick;
+            // 
+            // materialLabel41
+            // 
+            materialLabel41.AutoSize = true;
+            materialLabel41.Depth = 0;
+            materialLabel41.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel41.Location = new Point(23, 288);
+            materialLabel41.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel41.Name = "materialLabel41";
+            materialLabel41.Size = new Size(157, 19);
+            materialLabel41.TabIndex = 40;
+            materialLabel41.Text = "Nombre del Proveedor";
+            // 
+            // materialTextBox22
+            // 
+            materialTextBox22.AnimateReadOnly = false;
+            materialTextBox22.BorderStyle = BorderStyle.None;
+            materialTextBox22.Depth = 0;
+            materialTextBox22.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTextBox22.LeadingIcon = null;
+            materialTextBox22.Location = new Point(23, 310);
+            materialTextBox22.MaxLength = 50;
+            materialTextBox22.MouseState = MaterialSkin.MouseState.OUT;
+            materialTextBox22.Multiline = false;
+            materialTextBox22.Name = "materialTextBox22";
+            materialTextBox22.Size = new Size(157, 50);
+            materialTextBox22.TabIndex = 39;
+            materialTextBox22.Text = "";
+            materialTextBox22.TrailingIcon = null;
+            // 
+            // materialLabel39
+            // 
+            materialLabel39.AutoSize = true;
+            materialLabel39.Depth = 0;
+            materialLabel39.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel39.Location = new Point(390, 153);
+            materialLabel39.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel39.Name = "materialLabel39";
+            materialLabel39.Size = new Size(81, 19);
+            materialLabel39.TabIndex = 38;
+            materialLabel39.Text = "Existencias";
+            // 
+            // materialLabel40
+            // 
+            materialLabel40.AutoSize = true;
+            materialLabel40.Depth = 0;
+            materialLabel40.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel40.Location = new Point(390, 59);
+            materialLabel40.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel40.Name = "materialLabel40";
+            materialLabel40.Size = new Size(103, 19);
+            materialLabel40.TabIndex = 37;
+            materialLabel40.Text = "Descuento (%)";
+            // 
+            // txt_new_existencias
+            // 
+            txt_new_existencias.AnimateReadOnly = false;
+            txt_new_existencias.BorderStyle = BorderStyle.None;
+            txt_new_existencias.Depth = 0;
+            txt_new_existencias.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_new_existencias.LeadingIcon = null;
+            txt_new_existencias.Location = new Point(389, 176);
+            txt_new_existencias.MaxLength = 50;
+            txt_new_existencias.MouseState = MaterialSkin.MouseState.OUT;
+            txt_new_existencias.Multiline = false;
+            txt_new_existencias.Name = "txt_new_existencias";
+            txt_new_existencias.Size = new Size(133, 50);
+            txt_new_existencias.TabIndex = 36;
+            txt_new_existencias.Text = "";
+            txt_new_existencias.TrailingIcon = null;
+            // 
+            // txt_new_descuento
+            // 
+            txt_new_descuento.AnimateReadOnly = false;
+            txt_new_descuento.BorderStyle = BorderStyle.None;
+            txt_new_descuento.Depth = 0;
+            txt_new_descuento.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_new_descuento.LeadingIcon = null;
+            txt_new_descuento.Location = new Point(389, 81);
+            txt_new_descuento.MaxLength = 50;
+            txt_new_descuento.MouseState = MaterialSkin.MouseState.OUT;
+            txt_new_descuento.Multiline = false;
+            txt_new_descuento.Name = "txt_new_descuento";
+            txt_new_descuento.Size = new Size(133, 50);
+            txt_new_descuento.TabIndex = 35;
+            txt_new_descuento.Text = "";
+            txt_new_descuento.TrailingIcon = null;
+            // 
+            // materialLabel35
+            // 
+            materialLabel35.AutoSize = true;
+            materialLabel35.Depth = 0;
+            materialLabel35.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel35.Location = new Point(23, 59);
+            materialLabel35.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel35.Name = "materialLabel35";
+            materialLabel35.Size = new Size(150, 19);
+            materialLabel35.TabIndex = 34;
+            materialLabel35.Text = "Nombre del Producto";
+            // 
+            // materialLabel36
+            // 
+            materialLabel36.AutoSize = true;
+            materialLabel36.Depth = 0;
+            materialLabel36.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel36.Location = new Point(566, 153);
+            materialLabel36.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel36.Name = "materialLabel36";
+            materialLabel36.Size = new Size(137, 19);
+            materialLabel36.TabIndex = 33;
+            materialLabel36.Text = "Precio de Farmacia";
+            // 
+            // materialLabel37
+            // 
+            materialLabel37.AutoSize = true;
+            materialLabel37.Depth = 0;
+            materialLabel37.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel37.Location = new Point(566, 59);
+            materialLabel37.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel37.Name = "materialLabel37";
+            materialLabel37.Size = new Size(102, 19);
+            materialLabel37.TabIndex = 32;
+            materialLabel37.Text = "Precio Publico";
+            // 
+            // materialLabel38
+            // 
+            materialLabel38.AutoSize = true;
+            materialLabel38.Depth = 0;
+            materialLabel38.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel38.Location = new Point(23, 153);
+            materialLabel38.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel38.Name = "materialLabel38";
+            materialLabel38.Size = new Size(186, 19);
+            materialLabel38.TabIndex = 31;
+            materialLabel38.Text = "Presentacion del Producto";
+            // 
+            // txt_new_name
+            // 
+            txt_new_name.AnimateReadOnly = false;
+            txt_new_name.BorderStyle = BorderStyle.None;
+            txt_new_name.Depth = 0;
+            txt_new_name.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_new_name.LeadingIcon = null;
+            txt_new_name.Location = new Point(23, 81);
+            txt_new_name.MaxLength = 50;
+            txt_new_name.MouseState = MaterialSkin.MouseState.OUT;
+            txt_new_name.Multiline = false;
+            txt_new_name.Name = "txt_new_name";
+            txt_new_name.Size = new Size(325, 50);
+            txt_new_name.TabIndex = 30;
+            txt_new_name.Text = "";
+            txt_new_name.TrailingIcon = null;
+            // 
+            // txt_new_farmacia
+            // 
+            txt_new_farmacia.AnimateReadOnly = false;
+            txt_new_farmacia.BorderStyle = BorderStyle.None;
+            txt_new_farmacia.Depth = 0;
+            txt_new_farmacia.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_new_farmacia.LeadingIcon = null;
+            txt_new_farmacia.Location = new Point(565, 176);
+            txt_new_farmacia.MaxLength = 50;
+            txt_new_farmacia.MouseState = MaterialSkin.MouseState.OUT;
+            txt_new_farmacia.Multiline = false;
+            txt_new_farmacia.Name = "txt_new_farmacia";
+            txt_new_farmacia.Size = new Size(133, 50);
+            txt_new_farmacia.TabIndex = 29;
+            txt_new_farmacia.Text = "";
+            txt_new_farmacia.TrailingIcon = null;
+            txt_new_farmacia.TextChanged += materialTextBox17_TextChanged;
+            // 
+            // txt_new_publico
+            // 
+            txt_new_publico.AnimateReadOnly = false;
+            txt_new_publico.BorderStyle = BorderStyle.None;
+            txt_new_publico.Depth = 0;
+            txt_new_publico.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_new_publico.LeadingIcon = null;
+            txt_new_publico.Location = new Point(565, 81);
+            txt_new_publico.MaxLength = 50;
+            txt_new_publico.MouseState = MaterialSkin.MouseState.OUT;
+            txt_new_publico.Multiline = false;
+            txt_new_publico.Name = "txt_new_publico";
+            txt_new_publico.Size = new Size(133, 50);
+            txt_new_publico.TabIndex = 28;
+            txt_new_publico.Text = "";
+            txt_new_publico.TrailingIcon = null;
+            // 
+            // txt_new_presentacion
+            // 
+            txt_new_presentacion.AnimateReadOnly = false;
+            txt_new_presentacion.BorderStyle = BorderStyle.None;
+            txt_new_presentacion.Depth = 0;
+            txt_new_presentacion.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_new_presentacion.LeadingIcon = null;
+            txt_new_presentacion.Location = new Point(23, 176);
+            txt_new_presentacion.MaxLength = 50;
+            txt_new_presentacion.MouseState = MaterialSkin.MouseState.OUT;
+            txt_new_presentacion.Multiline = false;
+            txt_new_presentacion.Name = "txt_new_presentacion";
+            txt_new_presentacion.Size = new Size(325, 50);
+            txt_new_presentacion.TabIndex = 27;
+            txt_new_presentacion.Text = "";
+            txt_new_presentacion.TrailingIcon = null;
+            // 
+            // materialLabel30
+            // 
+            materialLabel30.AutoSize = true;
+            materialLabel30.Depth = 0;
+            materialLabel30.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel30.Location = new Point(364, 31);
+            materialLabel30.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel30.Name = "materialLabel30";
+            materialLabel30.Size = new Size(133, 19);
+            materialLabel30.TabIndex = 18;
+            materialLabel30.Text = "Lista de Productos";
+            // 
+            // materialLabel27
+            // 
+            materialLabel27.AutoSize = true;
+            materialLabel27.Depth = 0;
+            materialLabel27.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel27.Location = new Point(23, 269);
+            materialLabel27.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel27.Name = "materialLabel27";
+            materialLabel27.Size = new Size(164, 19);
+            materialLabel27.TabIndex = 17;
+            materialLabel27.Text = "Producto Seleccionado";
+            // 
+            // dataGridView13
+            // 
+            dataGridView13.AllowUserToOrderColumns = true;
+            dataGridView13.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView13.BackgroundColor = SystemColors.Window;
+            dataGridView13.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle31.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = SystemColors.Window;
+            dataGridViewCellStyle31.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle31.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle31.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = DataGridViewTriState.False;
+            dataGridView13.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridView13.Location = new Point(23, 291);
+            dataGridView13.Name = "dataGridView13";
+            dataGridView13.Size = new Size(1585, 54);
+            dataGridView13.TabIndex = 16;
+            // 
+            // materialLabel29
+            // 
+            materialLabel29.AutoSize = true;
+            materialLabel29.Depth = 0;
+            materialLabel29.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel29.Location = new Point(23, 68);
+            materialLabel29.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel29.Name = "materialLabel29";
+            materialLabel29.Size = new Size(150, 19);
+            materialLabel29.TabIndex = 13;
+            materialLabel29.Text = "Nombre del Producto";
+            // 
+            // materialButton8
+            // 
+            materialButton8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton8.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton8.Depth = 0;
+            materialButton8.HighEmphasis = true;
+            materialButton8.Icon = null;
+            materialButton8.Location = new Point(263, 104);
+            materialButton8.Margin = new Padding(4, 6, 4, 6);
+            materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton8.Name = "materialButton8";
+            materialButton8.NoAccentTextColor = Color.Empty;
+            materialButton8.Size = new Size(77, 36);
+            materialButton8.TabIndex = 12;
+            materialButton8.Text = "Buscar";
+            materialButton8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton8.UseAccentColor = false;
+            materialButton8.UseVisualStyleBackColor = true;
+            materialButton8.Click += materialButton8_Click;
+            // 
+            // materialTextBox11
+            // 
+            materialTextBox11.AnimateReadOnly = false;
+            materialTextBox11.BorderStyle = BorderStyle.None;
+            materialTextBox11.Depth = 0;
+            materialTextBox11.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTextBox11.LeadingIcon = null;
+            materialTextBox11.Location = new Point(23, 90);
+            materialTextBox11.MaxLength = 50;
+            materialTextBox11.MouseState = MaterialSkin.MouseState.OUT;
+            materialTextBox11.Multiline = false;
+            materialTextBox11.Name = "materialTextBox11";
+            materialTextBox11.Size = new Size(219, 50);
+            materialTextBox11.TabIndex = 11;
+            materialTextBox11.Text = "";
+            materialTextBox11.TrailingIcon = null;
+            // 
+            // dataGridView14
+            // 
+            dataGridView14.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView14.BackgroundColor = Color.White;
+            dataGridView14.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle32.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = SystemColors.Window;
+            dataGridViewCellStyle32.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle32.ForeColor = Color.DeepPink;
+            dataGridViewCellStyle32.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = DataGridViewTriState.False;
+            dataGridView14.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridView14.Location = new Point(364, 53);
+            dataGridView14.Name = "dataGridView14";
+            dataGridView14.Size = new Size(1430, 183);
+            dataGridView14.TabIndex = 10;
+            dataGridView14.CellContentClick += dataGridView14_CellContentClick;
+            // 
+            // materialLabel28
+            // 
+            materialLabel28.AutoSize = true;
+            materialLabel28.Depth = 0;
+            materialLabel28.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel28.Location = new Point(548, 254);
+            materialLabel28.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel28.Name = "materialLabel28";
+            materialLabel28.Size = new Size(175, 19);
+            materialLabel28.TabIndex = 44;
+            materialLabel28.Text = "Proveedor Seleccionado:";
+            // 
+            // label_proveedor_seleccionado
+            // 
+            label_proveedor_seleccionado.AutoSize = true;
+            label_proveedor_seleccionado.Depth = 0;
+            label_proveedor_seleccionado.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label_proveedor_seleccionado.Location = new Point(572, 288);
+            label_proveedor_seleccionado.MouseState = MaterialSkin.MouseState.HOVER;
+            label_proveedor_seleccionado.Name = "label_proveedor_seleccionado";
+            label_proveedor_seleccionado.Size = new Size(9, 19);
+            label_proveedor_seleccionado.TabIndex = 45;
+            label_proveedor_seleccionado.Text = "  ";
             // 
             // Form1
             // 
@@ -1375,6 +2109,15 @@
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView12).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView11).EndInit();
+            tabPage6.ResumeLayout(false);
+            tabPage6.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView14).EndInit();
             ResumeLayout(false);
         }
 
@@ -1457,5 +2200,47 @@
         private MaterialSkin.Controls.MaterialLabel label_menosvendido;
         private MaterialSkin.Controls.MaterialLabel label_totalventas;
         private MaterialSkin.Controls.MaterialLabel label_totaldinero;
+        private TabPage tabPage6;
+        private MaterialSkin.Controls.MaterialLabel materialLabel27;
+        private DataGridView dataGridView13;
+        private MaterialSkin.Controls.MaterialLabel materialLabel29;
+        private MaterialSkin.Controls.MaterialButton materialButton8;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox11;
+        private DataGridView dataGridView14;
+        private MaterialSkin.Controls.MaterialLabel materialLabel30;
+        private MaterialSkin.Controls.MaterialLabel materialLabel31;
+        private MaterialSkin.Controls.MaterialTextBox txt_update_existencias;
+        private MaterialSkin.Controls.MaterialTextBox txt_update_descuento;
+        private MaterialSkin.Controls.MaterialTextBox txt_update_farmacia;
+        private MaterialSkin.Controls.MaterialTextBox txt_update_publico;
+        private MaterialSkin.Controls.MaterialButton materialButton12;
+        private MaterialSkin.Controls.MaterialButton materialButton11;
+        private MaterialSkin.Controls.MaterialButton materialButton10;
+        private MaterialSkin.Controls.MaterialButton materialButton9;
+        private MaterialSkin.Controls.MaterialLabel materialLabel34;
+        private MaterialSkin.Controls.MaterialLabel materialLabel33;
+        private MaterialSkin.Controls.MaterialLabel materialLabel32;
+        private GroupBox groupBox4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel39;
+        private MaterialSkin.Controls.MaterialLabel materialLabel40;
+        private MaterialSkin.Controls.MaterialTextBox txt_new_existencias;
+        private MaterialSkin.Controls.MaterialTextBox txt_new_descuento;
+        private MaterialSkin.Controls.MaterialLabel materialLabel35;
+        private MaterialSkin.Controls.MaterialLabel materialLabel36;
+        private MaterialSkin.Controls.MaterialLabel materialLabel37;
+        private MaterialSkin.Controls.MaterialLabel materialLabel38;
+        private MaterialSkin.Controls.MaterialTextBox txt_new_name;
+        private MaterialSkin.Controls.MaterialTextBox txt_new_farmacia;
+        private MaterialSkin.Controls.MaterialTextBox txt_new_publico;
+        private MaterialSkin.Controls.MaterialTextBox txt_new_presentacion;
+        private MaterialSkin.Controls.MaterialButton materialButton14;
+        private MaterialSkin.Controls.MaterialLabel materialLabel42;
+        private MaterialSkin.Controls.MaterialButton materialButton13;
+        private DataGridView dataGridView15;
+        private MaterialSkin.Controls.MaterialLabel materialLabel41;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox22;
+        private GroupBox groupBox5;
+        private MaterialSkin.Controls.MaterialLabel label_proveedor_seleccionado;
+        private MaterialSkin.Controls.MaterialLabel materialLabel28;
     }
 }

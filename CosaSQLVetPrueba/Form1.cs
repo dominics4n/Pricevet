@@ -29,6 +29,8 @@ namespace CosaSQLVetPrueba
         BindingSource NuevaCuentaBindingSource = new BindingSource();
         BindingSource MaxVentasBindigSource = new BindingSource();
         BindingSource MaxIngresoBindigSource = new BindingSource();
+        BindingSource ProductosModBindingSource = new BindingSource();
+        BindingSource ProductoSelectBindingSource = new BindingSource();
 
         public void estadisticaspro()
         {
@@ -229,9 +231,11 @@ namespace CosaSQLVetPrueba
             string ivastring = string.Format("{0:N2}", ivafl);
             label_total.Text = totalstring; label_descuento.Text = descuentostring;
             label_subtotal.Text = subtotalstring; label_iva.Text = ivastring;
+
             estadisticaspro();
 
-
+            ProductosModBindingSource.DataSource = tablasDAO.buscarProductosMod(materialTextBox11.Text);
+            dataGridView14.DataSource = ProductosModBindingSource;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -397,6 +401,7 @@ namespace CosaSQLVetPrueba
 
             int updateventas = tablasDAO.updateUltimaVenta(productoname, IDCuenta, Cantidad, precio, descuento, IDproducto);
             int updateventascuentas = tablasDAO.updateventahascuenta(IDproducto);
+            int updateexistencias = tablasDAO.updateExistenciasminus(IDproducto, Cantidad);
 
             VentasBindingSource.DataSource = tablasDAO.getVentasDetalleJoin(IDCuenta);
             dataGridView7.DataSource = VentasBindingSource;
@@ -414,6 +419,9 @@ namespace CosaSQLVetPrueba
 
             UltimaCuentaBindingSource.DataSource = tablasDAO.getUltimaCuenta();
             dataGridView10.DataSource = UltimaCuentaBindingSource;
+
+            ProductosCuentaBindingSource.DataSource = tablasDAO.buscarInventario(materialTextBox8.Text);
+            dataGridView8.DataSource = ProductosCuentaBindingSource;
 
             estadisticaspro();
         }
@@ -512,7 +520,7 @@ namespace CosaSQLVetPrueba
 
             label_total.Text = "0"; label_descuento.Text = "0";
             label_subtotal.Text = "0"; label_iva.Text = "0";
-            
+
         }
 
         private void tabPage5_Click(object sender, EventArgs e)
@@ -528,6 +536,151 @@ namespace CosaSQLVetPrueba
         private void materialLabel19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void materialTextBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton8_Click(object sender, EventArgs e)
+        {
+            TablasDAO tablasDAO = new TablasDAO();
+            //
+            ProductosModBindingSource.DataSource = tablasDAO.buscarProductosMod(materialTextBox11.Text);
+            dataGridView14.DataSource = ProductosModBindingSource;
+            //
+        }
+
+        private void dataGridView14_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+            int rowClicked = dataGridView.CurrentRow.Index;
+
+            TablasDAO tablasDAO = new TablasDAO();
+            ProductoSelectBindingSource.DataSource = tablasDAO.getProductoSelect((int)dataGridView.Rows[rowClicked].Cells[0].Value);
+            dataGridView13.DataSource = ProductoSelectBindingSource;
+        }
+
+        private void materialButton9_Click(object sender, EventArgs e)
+        {
+            int IDproducto = (int)dataGridView13.Rows[0].Cells[0].Value;
+            int Cantidad = 1;
+            Int32.TryParse(txt_update_existencias.Text, out Cantidad);
+
+            TablasDAO tablasDAO = new TablasDAO();
+
+            int updateexistencias = tablasDAO.updateExistencias(Cantidad, IDproducto);
+
+            ProductoSelectBindingSource.DataSource = tablasDAO.getProductoSelect(IDproducto);
+            dataGridView13.DataSource = ProductoSelectBindingSource;
+
+            ProductosModBindingSource.DataSource = tablasDAO.buscarProductosMod(materialTextBox11.Text);
+            dataGridView14.DataSource = ProductosModBindingSource;
+        }
+
+        private void materialButton10_Click(object sender, EventArgs e)
+        {
+            int IDproducto = (int)dataGridView13.Rows[0].Cells[0].Value;
+            float CostPublico = 1;
+            float.TryParse(txt_update_publico.Text, out CostPublico);
+
+            TablasDAO tablasDAO = new TablasDAO();
+
+            int updatecostopublico = tablasDAO.updatepublic_cost(CostPublico, IDproducto);
+
+            ProductoSelectBindingSource.DataSource = tablasDAO.getProductoSelect(IDproducto);
+            dataGridView13.DataSource = ProductoSelectBindingSource;
+
+            ProductosModBindingSource.DataSource = tablasDAO.buscarProductosMod(materialTextBox11.Text);
+            dataGridView14.DataSource = ProductosModBindingSource;
+        }
+
+        private void materialButton11_Click(object sender, EventArgs e)
+        {
+            int IDproducto = (int)dataGridView13.Rows[0].Cells[0].Value;
+            float CostFarmacia = 1;
+            float.TryParse(txt_update_farmacia.Text, out CostFarmacia);
+
+            TablasDAO tablasDAO = new TablasDAO();
+
+            int updatecostofarmacia = tablasDAO.updatemedic_cost(CostFarmacia, IDproducto);
+
+            ProductoSelectBindingSource.DataSource = tablasDAO.getProductoSelect(IDproducto);
+            dataGridView13.DataSource = ProductoSelectBindingSource;
+
+            ProductosModBindingSource.DataSource = tablasDAO.buscarProductosMod(materialTextBox11.Text);
+            dataGridView14.DataSource = ProductosModBindingSource;
+        }
+
+        private void materialButton12_Click(object sender, EventArgs e)
+        {
+            int IDproducto = (int)dataGridView13.Rows[0].Cells[0].Value;
+            int Descuento = 1;
+            Int32.TryParse(txt_update_descuento.Text, out Descuento);
+
+            TablasDAO tablasDAO = new TablasDAO();
+
+            int updatedescuento = tablasDAO.updateDescuento(Descuento, IDproducto);
+
+            ProductoSelectBindingSource.DataSource = tablasDAO.getProductoSelect(IDproducto);
+            dataGridView13.DataSource = ProductoSelectBindingSource;
+
+            ProductosModBindingSource.DataSource = tablasDAO.buscarProductosMod(materialTextBox11.Text);
+            dataGridView14.DataSource = ProductosModBindingSource;
+        }
+
+        private void materialButton13_Click(object sender, EventArgs e)
+        {
+            TablasDAO tablasDAO = new TablasDAO();
+
+            ProveedorMiniBindingSource.DataSource = tablasDAO.searchProveedorIDNombre(materialTextBox22.Text);
+            dataGridView15.DataSource = ProveedorMiniBindingSource;
+        }
+        public int ProveedorIDsearch = 1;
+        public string ProveedorNamesearch = "FYNSA";
+        private void dataGridView15_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridView dataGridView = (DataGridView)sender;
+            int rowClicked = dataGridView.CurrentRow.Index;
+            ProveedorIDsearch  = (int)dataGridView.Rows[rowClicked].Cells[0].Value;
+            ProveedorNamesearch = (string)dataGridView.Rows[rowClicked].Cells[1].Value;
+            label_proveedor_seleccionado.Text = ProveedorNamesearch;
+        }
+        private void materialButton14_Click(object sender, EventArgs e)
+        {
+            string newNameProd = txt_new_name.Text;
+            string newPresentacion = txt_new_presentacion.Text;
+            string newProveedorName = ProveedorNamesearch;
+            int newProveedorID = ProveedorIDsearch;
+            float newPublicosto = 1;
+            float.TryParse(txt_new_publico.Text, out newPublicosto);
+            float newMedicosto = 1;
+            float.TryParse(txt_new_farmacia.Text, out newMedicosto);
+            int newCantidad = 1;
+            Int32.TryParse(txt_new_existencias.Text, out newCantidad);
+            int newDescuento = 0;
+            Int32.TryParse(txt_new_descuento.Text, out newDescuento);
+
+            TablasDAO tablasDAO = new TablasDAO();
+
+            int insertProducto = tablasDAO.addProducto(newNameProd, newPresentacion, newProveedorName, newProveedorID, newPublicosto, newMedicosto, newCantidad, newDescuento);
+
+            ProductosModBindingSource.DataSource = tablasDAO.buscarProductosMod(materialTextBox11.Text);
+            dataGridView14.DataSource = ProductosModBindingSource;
+            estadisticaspro();
         }
     }
 }
